@@ -5,11 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './crud-agregar-item.page.html',
   styleUrls: ['./crud-agregar-item.page.scss'],
 })
-export class CrudAgregarItemPage implements OnInit {
+export class CrudAgregarItemPage{
+  // Estructura registro, agrupa varios campos
+  // Debieramos utilizar una interface
+  registro={
+    id:"",
+    nombres:"",
+    titulo:"",
+    descripcion:"",
 
-  constructor() { }
-
-  ngOnInit() {
   }
+  constructor() { }
+  // Método grabar, vacío
+  grabar(){}
 
 }

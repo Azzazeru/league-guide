@@ -5,11 +5,29 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './crud-leer-item.page.html',
   styleUrls: ['./crud-leer-item.page.scss'],
 })
-export class CrudLeerItemPage implements OnInit {
+export class CrudLeerItemPage{
+  msgError = ""
+  buttonEliminarDisabled = false
+  buttonLeerDisabled = false
+  buttonActualizarDisabled = false
+  buttonCrearDisabled = false
+  public id: String = '';
+  registro = {
+      id:"",
+  nombres:"",
+  titulo:"",
+  descripcion:"",
+  }
+
+
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  leer() { }
+  eliminar() { }
+  grabar() { }
+  actualizar() { }
+  grabarActualizarAutomatico() { }
+  // myBackButton() {this.location.back();}
 
 }
