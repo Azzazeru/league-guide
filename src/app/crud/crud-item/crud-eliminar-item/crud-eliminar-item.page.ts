@@ -5,11 +5,12 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './crud-eliminar-item.page.html',
   styleUrls: ['./crud-eliminar-item.page.scss'],
 })
-export class CrudEliminarItemPage implements OnInit {
+export class CrudEliminarItemPage{
+
+  id="2"
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  grabar(){}
 
 }
