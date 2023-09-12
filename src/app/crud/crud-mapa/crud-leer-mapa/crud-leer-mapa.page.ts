@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrudLeerMapaPage implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+  msgError = ""
+  buttonEliminarDisabled = false
+  buttonLeerDisabled = false
+  buttonActualizarDisabled = false
+  buttonCrearDisabled = false
+  public id: String = '';
+  registro = {
+    id:"",
+    nombres:"",
+    titulo:"",
+    descripcion:"",
+    cantidad_azul:"",
+    cantidad_rojo:"",
+    tematica_especial:"",
+    reglas_especiales:"",
   }
 
+
+
+  constructor() { }
+
+  leer() { }
+  eliminar() { }
+  grabar() { }
+  actualizar() { }
+  grabarActualizarAutomatico() { }
+  ngOnInit() {
+  }
 }

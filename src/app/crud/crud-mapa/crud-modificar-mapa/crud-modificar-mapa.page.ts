@@ -11,5 +11,16 @@ export class CrudModificarMapaPage implements OnInit {
 
   ngOnInit() {
   }
+  registro={
+    id:"",
+    nombres:"",
+    titulo:"",
+    descripcion:"",
+    cantidad_azul:"",
+    cantidad_rojo:"",
+    tematica_especial:"",
+    reglas_especiales:"",
 
+  }
+  grabar(){}
 }
