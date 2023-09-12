@@ -6,8 +6,7 @@
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-
-    <ion-title>Eliminar</ion-title>
+    <ion-title>Actualizar</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,9 +18,17 @@
       <ion-label position="floating">ID</ion-label>
       <ion-input type="text" name="txId" [(ngModel)]="id" required></ion-input>
     </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input type="text" name="txNombre" [(ngModel)]="registro.nombre" required></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label position="floating">Link</ion-label>
+      <ion-input type="text" name="txLink" [(ngModel)]="registro.link" required></ion-input>
+    </ion-item>
     <ion-row>
       <ion-col>
-        <ion-button (click)="grabar()" color="danger" expand="block">Eliminar Modo de Juego</ion-button>
+        <ion-button (click)="grabar()" color="danger" expand="block">Crear Cuenta</ion-button>
       </ion-col>
     </ion-row>
   </form>

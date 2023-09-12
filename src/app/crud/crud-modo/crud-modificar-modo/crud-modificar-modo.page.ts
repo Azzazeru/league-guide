@@ -5,11 +5,17 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './crud-modificar-modo.page.html',
   styleUrls: ['./crud-modificar-modo.page.scss'],
 })
-export class CrudModificarModoPage implements OnInit {
+export class CrudModificarModoPage {
+  id = "1"
+    registro = {
+        nombres: "",
+        titulo:"",
+        mapa: ""
+    }
 
   constructor() { }
 
-  ngOnInit() {
+  grabar() {
   }
 
 }

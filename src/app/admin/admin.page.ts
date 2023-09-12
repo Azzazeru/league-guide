@@ -29,4 +29,8 @@ export class AdminPage implements OnInit {
     this.router.navigate(['/crud-modo']);
   }
 
+  redirectToCrudNoticias() {
+    this.router.navigate(['/crud-noticia']);
+  }
+
 } 

@@ -5,11 +5,29 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './crud-leer-modo.page.html',
   styleUrls: ['./crud-leer-modo.page.scss'],
 })
-export class CrudLeerModoPage implements OnInit {
+export class CrudLeerModoPage  {
+
+  msgError = ""
+  buttonEliminarDisabled = false
+  buttonLeerDisabled = false
+  buttonActualizarDisabled = false
+  buttonCrearDisabled = false
+  public id: String = '';
+  registro = {
+      id:"",
+  nombres:"",
+  mapa:""}
+
+
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  leer() { }
+  eliminar() { }
+  grabar() { }
+  actualizar() { }
+  grabarActualizarAutomatico() { }
+  // myBackButton() {this.location.back();}
+
 
 }

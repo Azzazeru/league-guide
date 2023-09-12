@@ -1,11 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-menu-button style="color:blueviolet"></ion-menu-button>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    
+    <!-- icono al final back button-->
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
+
     <ion-title>Listar</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,17 +18,16 @@
       <!-- Recorremos el arreglo de registros utilizando item-->
       <ion-item *ngFor="let item of registros">
         <!-- Icono al inicio (start)-->
-        <!-- <ion-icon name="star" slot="start"></ion-icon> -->
+        <ion-icon name="star" slot="start"></ion-icon>
         <!-- Campos de item -->
-        <ion-label>{{item.id}}</ion-label>
-        <ion-label>{{item.nombre}}</ion-label>
-        <ion-label>{{item.mapa}}</ion-label>
+        <ion-label>{{item.nombres}}</ion-label>
+        <ion-label>{{item.link}}</ion-label>
         <!-- Icono al final -->
-        <!-- <ion-icon name="information-circle" slot="end"></ion-icon> -->
+        <ion-icon name="information-circle" slot="end"></ion-icon>
         <!-- routerlink salta a otra pagina-->
-        <!-- <ion-button [routerLink]="['/cliente/leer']">Sin ID</ion-button><br/> -->
+        <ion-button [routerLink]="['/cliente/leer']">Sin ID</ion-button><br/>
         <!-- routerlink salta a otra pagina, pero con id del item-->
-        <!-- <ion-button [routerLink]="['/cliente/leer',item.id]">Con ID</ion-button><br/> -->
+        <ion-button [routerLink]="['/cliente/leer',item.id]">Con ID</ion-button><br/>
           </ion-item>
   </ion-list>
 </ion-content>

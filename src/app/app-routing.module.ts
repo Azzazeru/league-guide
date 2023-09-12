@@ -174,7 +174,31 @@ const routes: Routes = [
   {
     path: 'crud-leer-modo',
     loadChildren: () => import('./crud/crud-modo/crud-leer-modo/crud-leer-modo.module').then( m => m.CrudLeerModoPageModule)
+  },  {
+    path: 'crud-agregar-noticia',
+    loadChildren: () => import('./crud/crud-noticias/crud-agregar-noticia/crud-agregar-noticia.module').then( m => m.CrudAgregarNoticiaPageModule)
+  },
+  {
+    path: 'crud-actualizar-noticia',
+    loadChildren: () => import('./crud/crud-noticias/crud-actualizar-noticia/crud-actualizar-noticia.module').then( m => m.CrudActualizarNoticiaPageModule)
+  },
+  {
+    path: 'crud-eliminar-noticia',
+    loadChildren: () => import('./crud/crud-noticias/crud-eliminar-noticia/crud-eliminar-noticia.module').then( m => m.CrudEliminarNoticiaPageModule)
+  },
+  {
+    path: 'crud-leer-noticia',
+    loadChildren: () => import('./crud/crud-noticias/crud-leer-noticia/crud-leer-noticia.module').then( m => m.CrudLeerNoticiaPageModule)
+  },
+  {
+    path: 'crud-listar-noticia',
+    loadChildren: () => import('./crud/crud-noticias/crud-listar-noticia/crud-listar-noticia.module').then( m => m.CrudListarNoticiaPageModule)
+  },
+  {
+    path: 'crud-noticia',
+    loadChildren: () => import('./crud/crud-noticias/crud-noticia/crud-noticia.module').then( m => m.CrudNoticiaPageModule)
   }
+
 ];
 
 @NgModule({

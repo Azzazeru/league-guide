@@ -1,0 +1,26 @@
+.centrar{
+    text-align: center;
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    ion-input {
+      width: 80%;
+      margin-bottom: 10px;
+    }
+  
+    ion-button {
+      width: 80%; /* Ajusta el ancho del botón */
+      margin-top: 10px; /* Espaciado entre el último input y el botón */
+    }
+  }
