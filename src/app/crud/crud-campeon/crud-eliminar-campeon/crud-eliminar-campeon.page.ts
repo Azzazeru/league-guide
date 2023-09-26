@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClienteService } from '../campeonService';
 
 @Component({
   selector: 'app-eliminar',
@@ -7,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClienteEliminarPage {
 
-  id="1"
+  id="0"
 
-  constructor() { }
+  constructor(private cliServ:ClienteService) { }
 
-  grabar(){}
+  grabar(){
+    // Invocamos al método creado en el servicio
+    // Le pasamos como parámetro el ID 
+    this.cliServ.eliminarServicio(this.id)
+
+  } 
 
 }

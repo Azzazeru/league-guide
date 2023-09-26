@@ -174,7 +174,8 @@ const routes: Routes = [
   {
     path: 'crud-leer-modo',
     loadChildren: () => import('./crud/crud-modo/crud-leer-modo/crud-leer-modo.module').then( m => m.CrudLeerModoPageModule)
-  },  {
+  },
+  {
     path: 'crud-agregar-noticia',
     loadChildren: () => import('./crud/crud-noticias/crud-agregar-noticia/crud-agregar-noticia.module').then( m => m.CrudAgregarNoticiaPageModule)
   },
@@ -197,7 +198,32 @@ const routes: Routes = [
   {
     path: 'crud-noticia',
     loadChildren: () => import('./crud/crud-noticias/crud-noticia/crud-noticia.module').then( m => m.CrudNoticiaPageModule)
+  },
+  {
+    path: 'add-usuario',
+    loadChildren: () => import('./crud/crud-usuario/add-usuario/add-usuario.module').then( m => m.AddUsuarioPageModule)
+  },
+  {
+    path: 'list-usuario',
+    loadChildren: () => import('./crud/crud-usuario/list-usuario/list-usuario.module').then( m => m.ListUsuarioPageModule)
+  },
+  {
+    path: 'detail-usuario/:id',
+    loadChildren: () => import('./crud/crud-usuario/detail-usuario/detail-usuario.module').then( m => m.DetailUsuarioPageModule)
+  },
+  {
+    path: 'edit-usuario/:id',
+    loadChildren: () => import('./crud/crud-usuario/edit-usuario/edit-usuario.module').then( m => m.EditUsuarioPageModule)
+  },
+  {
+    path: 'all-usuario',
+    loadChildren: () => import('./crud/crud-usuario/all-usuario/all-usuario.module').then( m => m.AllUsuarioPageModule)
+  },
+  {
+    path: 'usuario',
+    loadChildren: () => import('./crud/crud-usuario/usuario/usuario.module').then( m => m.UsuarioPageModule)
   }
+
 
 ];
 

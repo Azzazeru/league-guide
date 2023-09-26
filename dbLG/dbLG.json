@@ -1,0 +1,58 @@
+{
+    "usuario" : [
+        {
+            "id" : "1",
+            "nombre" : "a",
+            "contrasenia" : "",
+            "servidor" : ""
+        }
+    ],
+
+    "campeon" : [
+        {
+            "id" : "1",
+            "titulo" : "a",
+            "descripcion" : "",
+            "habilidadq" : "",
+            "habilidadw" : "",
+            "habilidade" : "",
+            "habilidadr" : ""
+
+        }
+    ],
+
+    "item" : [
+        {
+            "id" : "1",
+            "nombre" : "a",
+            "titulo" : "",
+            "descripcion" : ""
+        }
+    ],
+
+    "mapa" : [
+        {
+            "id" : "1",
+            "nombre" : "a",
+            "titulo" : "",
+            "descripcion" : ""
+        }
+    ],
+
+    "modo" : [
+        {
+            "id" : "1",
+            "nombre" : "a",
+            "mapa" : ""
+        }
+    ],
+
+    "noticia" : [
+        {
+            "id" : "1",
+            "titulo" : "a",
+            "link" : ""
+        }
+    ]
+
+}

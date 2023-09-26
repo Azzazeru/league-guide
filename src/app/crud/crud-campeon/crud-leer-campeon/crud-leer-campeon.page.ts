@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ClienteService } from '../campeonService';
+import { IRegistro } from '../interface/IRegistro';
+
 @Component({
     selector: 'app-leer',
     templateUrl: './crud-leer-campeon.page.html',
@@ -10,23 +13,28 @@ export class ClienteLeerPage {
     buttonLeerDisabled = false
     buttonActualizarDisabled = false
     buttonCrearDisabled = false
-    public id: String = '';
-    registro = {
+    public id: string = '';
+    registro:IRegistro = {
         id:"",
-    nombres:"",
+    nombre:"",
     titulo:"",
     descripcion:"",
     habilidadq:"",
     habilidadw:"",
     habilidade:"",
-    habilidadr:"",
+    habilidadr:""
     }
 
 
 
-    constructor() { }
-
-    leer() { }
+    constructor(private cliServ:ClienteService) { }
+    
+    leer() { 
+        // El servicio retorna la dirección del objeto
+        // Se actualiza de inmediato el HTML, ya que utilizas NGModel
+        this.registro=this.cliServ.leerServicio(this.id)
+        this.registro.id= "jajajajajajaj por referencia"
+    }
     eliminar() { }
     grabar() { }
     actualizar() { }

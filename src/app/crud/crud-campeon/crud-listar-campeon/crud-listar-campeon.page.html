@@ -14,21 +14,77 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label>
+      <font color="red">Utilizando un Accesador</font>
+    </ion-label>
+  </ion-item>
   <ion-list padding>
-      <!-- Recorremos el arreglo de registros utilizando item-->
-      <ion-item *ngFor="let item of registros">
-        <!-- Icono al inicio (start)-->
-        <!-- <ion-icon name="star" slot="start"></ion-icon> -->
-        <!-- Campos de item -->
-        <ion-label>{{item.id}}</ion-label>
-        <ion-label>{{item.nombre}}</ion-label>
-        <ion-label>{{item.titulo}}</ion-label>
-        <!-- Icono al final -->
-        <!-- <ion-icon name="information-circle" slot="end"></ion-icon> -->
-        <!-- routerlink salta a otra pagina-->
-        <!-- <ion-button [routerLink]="['/cliente/leer']">Sin ID</ion-button><br/> -->
-        <!-- routerlink salta a otra pagina, pero con id del item-->
-        <!-- <ion-button [routerLink]="['/cliente/leer',item.id]">Con ID</ion-button><br/> -->
-          </ion-item>
+    <!-- Recorremos el arreglo de registros utilizando item-->
+    <ion-item *ngFor="let item of getRegistros">
+      <!-- Icono al inicio (start)-->
+      <ion-icon name="star" slot="start"></ion-icon>
+      <!-- Campos de item -->
+      <ion-label>{{item.id}}</ion-label>
+      <ion-label>{{item.nombre}}</ion-label>
+      <ion-label>{{item.titulo}}</ion-label>
+      <!-- Icono al final -->
+      <ion-icon name="information-circle" slot="end"></ion-icon>
+      <!-- routerlink salta a otra pagina-->
+      <ion-button [routerLink]="['/crud-campeon/crud-campeon-leerr']">Sin ID</ion-button><br />
+      <!-- routerlink salta a otra pagina, pero con id del item-->
+      <ion-button [routerLink]="['/crud-campeon/crud-campeon-leer',item.id]">Con ID</ion-button><br />
+    </ion-item>
   </ion-list>
+
+
+
+  
+  <ion-item>
+    <ion-label>
+      <font color="red">Utilizando un método</font>
+    </ion-label>
+  </ion-item>
+  <ion-list padding>
+    <!-- Recorremos el arreglo de registros utilizando item-->
+    <ion-item *ngFor="let item of getRegistrosMetodo()">
+      <!-- Icono al inicio (start)-->
+      <ion-icon name="star" slot="start"></ion-icon>
+      <!-- Campos de item -->
+      <ion-label>{{item.id}}</ion-label>
+      <ion-label>{{item.nombre}}</ion-label>
+      <ion-label>{{item.titulo}}</ion-label>
+      <!-- Icono al final -->
+      <ion-icon name="information-circle" slot="end"></ion-icon>
+      <!-- routerlink salta a otra pagina-->
+      <ion-button [routerLink]="['/crud-campeon/crud-campeon-leer']">Sin ID</ion-button><br />
+      <!-- routerlink salta a otra pagina, pero con id del item-->
+      <ion-button [routerLink]="['/crud-campeon/crud-campeon-leer',item.id]">Con ID</ion-button><br />
+    </ion-item>
+  </ion-list>
+
+
+  
+  <ion-item>
+    <ion-label>
+      <font color="red">Utilizando una injección Pública</font>
+    </ion-label>
+  </ion-item>
+  <ion-list padding>
+    <!-- Recorremos el arreglo de registros utilizando item-->
+    <ion-item *ngFor="let item of this.cliServPublic.getRegistrosCopia">
+      <!-- Icono al inicio (start)-->
+      <ion-icon name="star" slot="start"></ion-icon>
+      <!-- Campos de item -->
+      <ion-label>{{item.id}}</ion-label>
+      <ion-label>{{item.nombre}}</ion-label>
+      <ion-label>{{item.titulo}}</ion-label>
+      <!-- Icono al final -->
+      <ion-icon name="information-circle" slot="end"></ion-icon>
+      <!-- routerlink salta a otra pagina-->
+      <ion-button [routerLink]="['/crud-campeon/crud-campeon-leer']">Sin ID</ion-button><br />
+      <!-- routerlink salta a otra pagina, pero con id del item-->
+      <ion-button [routerLink]="['/crud-campeon/crud-campeon-leer',item.id]">Con ID</ion-button><br />
+    </ion-item>
+  </ion-list>  
 </ion-content>

@@ -13,6 +13,10 @@ export class AdminPage implements OnInit {
   ngOnInit() {
   }
 
+  redirectToCrudUsuarios() {
+    this.router.navigate(['/usuario']);
+  }
+
   redirectToCrudCampeones() {
     this.router.navigate(['/crud-campeon']);
   }

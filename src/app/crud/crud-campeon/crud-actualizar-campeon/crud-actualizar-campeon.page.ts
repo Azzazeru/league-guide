@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClienteService } from '../campeonService';
 
 @Component({
     selector: 'app-actualizar',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class ClienteActualizarPage {
     id = "1"
     registro = {
-        nombres: "",
+        nombre: "",
         titulo:"",
         descripcion:"",
         habilidadq:"",
@@ -17,9 +18,14 @@ export class ClienteActualizarPage {
         habilidadr:"",
     }
 
-    constructor() { }
+    constructor(private cliServ:ClienteService) { }
 
-    grabar() { }
+    grabar() { 
+        // Invocamos al método creado en el servicio
+        // Le pasamos como parámetro el ID y la variable registro
+        // registro, contiene todos los campos enlazados del Html
+        this.cliServ.actualizarServicio(this.id,this.registro)
+    }
 
 
 }

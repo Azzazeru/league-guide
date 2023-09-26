@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ClienteService } from '../noticiaService';
 
 @Component({
     selector: 'app-actualizar',
@@ -8,12 +9,19 @@ import { Component, OnInit } from '@angular/core';
 export class ClienteActualizarPage {
     id = "1"
     registro = {
-        nombre: "Rework Skarner",
-        link: "www.lol.es"
+        titulo:"",
+        link:""
     }
 
-    constructor() { }
+    // Observe que en el constructor injectamos el ClienteService
+    // Le asignamos un nombre el cual utilizaremos más adelante
+    constructor(private cliServ:ClienteService) { }
 
-    grabar() { }
+    grabar() { 
+        // Invocamos al método creado en el servicio
+        // Le pasamos como parámetro el ID y la variable registro
+        // registro, contiene todos los campos enlazados del Html
+        this.cliServ.actualizarServicio(this.id,this.registro)
+    }
 
-  }
+}

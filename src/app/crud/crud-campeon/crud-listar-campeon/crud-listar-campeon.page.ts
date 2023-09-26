@@ -1,20 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+
+// Importamos ClienteService y IRegistro
+import { ClienteService } from '../campeonService';
+import { IRegistro } from '../interface/IRegistro';
 
 @Component({
   selector: 'app-listar',
   templateUrl: './crud-listar-campeon.page.html',
-  styleUrls: ['./crud-listar-campeon.page.scss'],
+  //styleUrls: ['./cliente.page.scss'],
 })
 export class ListarClientePage {
 
-  // Arreglo, de prueba, mientras se crean los servicios
+  //  Referencia ==> Solo tiene la dirección de memoria
+  //  No tiene sentido, solo la utilizamos para el ejemplo
+  registro=this.cliServ.getRegistrosReferencia
 
-  registros= [{id:"1",nombre:"Aatrox",titulo:"La Espada Darkin",descripcion:"Desc",habilidadq:"q",habilidadw:"w",habilidade:"e",habilidadr:"r"}
-             ,{id:"2",nombre:"Ahri",titulo:"La Vastaya de Nueve Colas"}
-             ,{id:"3",nombre:"Akali",titulo:"La Asesina Furtiva"}
-             ,{id:"4",nombre:"Akshan",titulo:"El Centinela Rebelde"}
-             ,{id:"5",nombre:"Alistar",titulo:"El Minotauro"}]
+  // Recibimos la clase ClienteService 
+  // por parámetro en el constructor(Injección)
+  constructor(private cliServ:ClienteService
+          // Cuando es public la puedo utilizar en el HTML
+              ,public cliServPublic:ClienteService
+              ) { 
 
-  constructor() { }
+    // (get) Solicita la dirección del arreglo
+    // pese que es un mètodo se utiliza como si fuera una variable 
+    // Agrega un registro, lo realiza en el original            
+    this.registro=this.cliServ.getRegistrosReferencia
+    this.registro.push({id:"", nombre:"",titulo:"",descripcion:"",habilidadq:"1134", habilidadw:"1134", habilidade:"1134", habilidadr:"1134"})
+    console.log("registroReferencia:",this.registro)
 
+    // (get) Solicita una copia, duplica la memoria ocupada por el arreglo
+    // Se agrega un registro localmente, no se altera el original
+    this.registro=this.cliServ.getRegistrosCopia
+    this.registro.push({id:"", nombre:"",titulo:"",descripcion:"x@c.cl",habilidadq:"1134", habilidadw:"1134", habilidade:"1134", habilidadr:"1134"})
+    console.log("registroCopia:",this.registro)
+
+    // Utiliza un método
+    // Agrega un registro en el original
+    this.registro=this.cliServ.getRegistroMetodo();
+    this.registro.push({id:"", nombre:"",titulo:"",descripcion:"x@c.cl",habilidadq:"1134", habilidadw:"1134", habilidade:"1134", habilidadr:"1134"})
+    console.log("registroMetodo:",this.registro)
+  }
+
+  get getRegistros():IRegistro[]{
+    // Solicita por medio de un acceador una copia 
+    return this.cliServ.getRegistros
+  }
+
+  getRegistrosMetodo():IRegistro[]{
+    // Solicita por medio de un acceador una copia 
+    return this.cliServ.getRegistrosCopia
+  }
 }

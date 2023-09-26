@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title> Nuevo Usuario </ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
+    <ion-item>
+      <ion-label position="floating">id</ion-label>
+      <ion-input type="text" [(ngModel)]="producto.id" formControlName="prod_id"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="producto.nombre" formControlName="prod_nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">contrasenia</ion-label>
+      <ion-textarea [(ngModel)]="producto.contrasenia" formControlName="prod_contrasenia"></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Servidor</ion-label>
+      <ion-input type="text" [(ngModel)]="producto.servidor" formControlName="prod_servidor"></ion-input>
+    </ion-item>
+    
+    <ion-button type="submit" shape="round" color="primary" expand="block"
+      [disabled]="!productForm.valid">Submit</ion-button>
+  </form>
+</ion-content>
