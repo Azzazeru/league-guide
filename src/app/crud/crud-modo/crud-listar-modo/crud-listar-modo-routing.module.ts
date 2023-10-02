@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CrudListarModoPage } from './crud-listar-modo.page';
+import { ListarClientePage } from './crud-listar-modo.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CrudListarModoPage
+    component: ListarClientePage
   }
 ];
 

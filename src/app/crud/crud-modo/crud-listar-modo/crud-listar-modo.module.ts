@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 
 import { CrudListarModoPageRoutingModule } from './crud-listar-modo-routing.module';
 
-import { CrudListarModoPage } from './crud-listar-modo.page';
+import { ListarClientePage } from './crud-listar-modo.page';
 
 @NgModule({
   imports: [
@@ -15,6 +15,6 @@ import { CrudListarModoPage } from './crud-listar-modo.page';
     IonicModule,
     CrudListarModoPageRoutingModule
   ],
-  declarations: [CrudListarModoPage]
+  declarations: [ListarClientePage]
 })
 export class CrudListarModoPageModule {}

@@ -1,20 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
+
+// Importamos ClienteService y IRegistro
+import { ClienteService } from '../modoService';
+import { IRegistro } from '../interface/IRegistro';
 
 @Component({
-  selector: 'app-crud-listar-modo',
+  selector: 'app-listar',
   templateUrl: './crud-listar-modo.page.html',
-  styleUrls: ['./crud-listar-modo.page.scss'],
+  //styleUrls: ['./cliente.page.scss'],
 })
+export class ListarClientePage {
 
-export class CrudListarModoPage implements OnInit {
+  //  Referencia ==> Solo tiene la dirección de memoria
+  //  No tiene sentido, solo la utilizamos para el ejemplo
+  registro=this.cliServ.getRegistrosReferencia
 
-  registros= [{id:"1",nombre:"Partida Normal",mapa:"Grieta del Invocador"}
-             ,{id:"2",nombre:"ARAM",mapa:"Abismo de los Lamentos"}
-             ,{id:"3",nombre:"2vs2",mapa:"Notengoideaxd"}]
+  // Recibimos la clase ClienteService 
+  // por parámetro en el constructor(Injección)
+  constructor(private cliServ:ClienteService
+          // Cuando es public la puedo utilizar en el HTML
+              ,public cliServPublic:ClienteService
+              ) { 
 
-  constructor() { }
+    // (get) Solicita la dirección del arreglo
+    // pese que es un mètodo se utiliza como si fuera una variable 
+    // Agrega un registro, lo realiza en el original            
+    this.registro=this.cliServ.getRegistrosReferencia
+    this.registro.push({id:"", nombre:"",mapa:""})
+    console.log("registroReferencia:",this.registro)
 
-  ngOnInit() {
+    // (get) Solicita una copia, duplica la memoria ocupada por el arreglo
+    // Se agrega un registro localmente, no se altera el original
+    this.registro=this.cliServ.getRegistrosCopia
+    this.registro.push({id:"", nombre:"",mapa:""})
+    console.log("registroCopia:",this.registro)
+
+    // Utiliza un método
+    // Agrega un registro en el original
+    this.registro=this.cliServ.getRegistroMetodo();
+    this.registro.push({id:"", nombre:"",mapa:""})
+    console.log("registroMetodo:",this.registro)
   }
 
+  get getRegistros():IRegistro[]{
+    // Solicita por medio de un acceador una copia 
+    return this.cliServ.getRegistros
+  }
+
+  getRegistrosMetodo():IRegistro[]{
+    // Solicita por medio de un acceador una copia 
+    return this.cliServ.getRegistrosCopia
+  }
 }
