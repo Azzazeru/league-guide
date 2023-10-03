@@ -215,7 +215,27 @@ const routes: Routes = [
   {
     path: 'campeon-detail/:id',
     loadChildren: () => import('./crud/crud-campeon/campeon-detail/campeon-detail.module').then( m => m.CampeonDetailPageModule)
+  },  {
+    path: 'mapa-add',
+    loadChildren: () => import('./crud/mapa/mapa-add/mapa-add.module').then( m => m.MapaAddPageModule)
   },
+  {
+    path: 'mapa-list',
+    loadChildren: () => import('./crud/mapa/mapa-list/mapa-list.module').then( m => m.MapaListPageModule)
+  },
+  {
+    path: 'mapa-detail',
+    loadChildren: () => import('./crud/mapa/mapa-detail/mapa-detail.module').then( m => m.MapaDetailPageModule)
+  },
+  {
+    path: 'mapa-edit',
+    loadChildren: () => import('./crud/mapa/mapa-edit/mapa-edit.module').then( m => m.MapaEditPageModule)
+  },
+  {
+    path: 'mapa-all',
+    loadChildren: () => import('./crud/mapa/mapa-all/mapa-all.module').then( m => m.MapaAllPageModule)
+  },
+
 
 
 ];
