@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { ClienteActualizarPageRoutingModule } from './crud-actualizar-campeon-routing.module';
 
 import { ClienteActualizarPage } from './crud-actualizar-campeon.page';
@@ -13,7 +15,8 @@ import { ClienteActualizarPage } from './crud-actualizar-campeon.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ClienteActualizarPageRoutingModule
+    ClienteActualizarPageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [ClienteActualizarPage]
 })

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { RegistrarsePageRoutingModule } from './registrarse-routing.module';
 
 import { RegistrarsePage } from './registrarse.page';
@@ -13,7 +15,8 @@ import { RegistrarsePage } from './registrarse.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    RegistrarsePageRoutingModule
+    RegistrarsePageRoutingModule,
+    ReactiveFormsModule
   ],
   declarations: [RegistrarsePage]
 })

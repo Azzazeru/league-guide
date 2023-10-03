@@ -31,7 +31,7 @@
     <ion-item>
       <div slot="label">Servidor</div>
       <ion-label></ion-label>
-      <ion-select>
+      <ion-select [(ngModel)]="selectedServer" name="selectedServer">
         <ion-select-option value="opcion1">NA</ion-select-option>
         <ion-select-option value="opcion2">EUW</ion-select-option>
         <ion-select-option value="opcion3">EUNE</ion-select-option>
@@ -52,7 +52,7 @@
       </ion-select>
     </ion-item>
 
-    <ion-button expand="block" style="margin-top: 25px;">Registrarse</ion-button>
+    <ion-button expand="block" style="margin-top: 25px;" (click)="registerUser()" href="/inicio">Registrarse</ion-button>
   </div>
 
 </ion-content>

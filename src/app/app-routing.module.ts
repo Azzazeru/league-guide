@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
   {
     path: 'campeones',
@@ -92,10 +92,6 @@ const routes: Routes = [
     loadChildren: () => import('./crud/crud-campeon/crud-listar-campeon/crud-listar-campeon.module').then( m => m.CrudListarCampeonPageModule)
   },
   {
-    path: 'crud-eliminar-campeon',
-    loadChildren: () => import('./crud/crud-campeon/crud-eliminar-campeon/crud-eliminar-campeon.module').then( m => m.CrudEliminarCampeonPageModule)
-  },
-  {
     path: 'crud-agregar-item',
     loadChildren: () => import('./crud/crud-item/crud-agregar-item/crud-agregar-item.module').then( m => m.CrudAgregarItemPageModule)
   },
@@ -156,11 +152,11 @@ const routes: Routes = [
     loadChildren: () => import('./crud/crud-item/crud-item/crud-item.module').then( m => m.CrudItemPageModule)
   },
   {
-    path: 'crud-actualizar-campeon',
+    path: 'crud-actualizar-campeon/:id',
     loadChildren: () => import('./crud/crud-campeon/crud-actualizar-campeon/crud-actualizar-campeon.module').then( m => m.CrudActualizarCampeonPageModule)
   },
   {
-    path: 'crud-leer-campeon',
+    path: 'crud-leer-campeon/:id',
     loadChildren: () => import('./crud/crud-campeon/crud-leer-campeon/crud-leer-campeon.module').then( m => m.CrudLeerCampeonPageModule)
   },
   {
@@ -174,30 +170,6 @@ const routes: Routes = [
   {
     path: 'crud-leer-modo',
     loadChildren: () => import('./crud/crud-modo/crud-leer-modo/crud-leer-modo.module').then( m => m.CrudLeerModoPageModule)
-  },
-  {
-    path: 'crud-agregar-noticia',
-    loadChildren: () => import('./crud/crud-noticias/crud-agregar-noticia/crud-agregar-noticia.module').then( m => m.CrudAgregarNoticiaPageModule)
-  },
-  {
-    path: 'crud-actualizar-noticia',
-    loadChildren: () => import('./crud/crud-noticias/crud-actualizar-noticia/crud-actualizar-noticia.module').then( m => m.CrudActualizarNoticiaPageModule)
-  },
-  {
-    path: 'crud-eliminar-noticia',
-    loadChildren: () => import('./crud/crud-noticias/crud-eliminar-noticia/crud-eliminar-noticia.module').then( m => m.CrudEliminarNoticiaPageModule)
-  },
-  {
-    path: 'crud-leer-noticia',
-    loadChildren: () => import('./crud/crud-noticias/crud-leer-noticia/crud-leer-noticia.module').then( m => m.CrudLeerNoticiaPageModule)
-  },
-  {
-    path: 'crud-listar-noticia',
-    loadChildren: () => import('./crud/crud-noticias/crud-listar-noticia/crud-listar-noticia.module').then( m => m.CrudListarNoticiaPageModule)
-  },
-  {
-    path: 'crud-noticia',
-    loadChildren: () => import('./crud/crud-noticias/crud-noticia/crud-noticia.module').then( m => m.CrudNoticiaPageModule)
   },
   {
     path: 'add-usuario',
@@ -222,7 +194,31 @@ const routes: Routes = [
   {
     path: 'usuario',
     loadChildren: () => import('./crud/crud-usuario/usuario/usuario.module').then( m => m.UsuarioPageModule)
-  }
+  },
+  {
+    path: 'noticia-add',
+    loadChildren: () => import('./crud/noticia/noticia-add/noticia-add.module').then( m => m.NoticiaAddPageModule)
+  },
+  {
+    path: 'noticia-list',
+    loadChildren: () => import('./crud/noticia/noticia-list/noticia-list.module').then( m => m.NoticiaListPageModule)
+  },
+  {
+    path: 'noticia-detail/:id',
+    loadChildren: () => import('./crud/noticia/noticia-detail/noticia-detail.module').then( m => m.NoticiaDetailPageModule)
+  },
+  {
+    path: 'noticia-edit/:id',
+    loadChildren: () => import('./crud/noticia/noticia-edit/noticia-edit.module').then( m => m.NoticiaEditPageModule)
+  },
+  {
+    path: 'noticia-all',
+    loadChildren: () => import('./crud/noticia/noticia-all/noticia-all.module').then( m => m.NoticiaAllPageModule)
+  },
+  {
+    path: 'campeon-detail/:id',
+    loadChildren: () => import('./crud/crud-campeon/campeon-detail/campeon-detail.module').then( m => m.CampeonDetailPageModule)
+  },
 
 
 ];

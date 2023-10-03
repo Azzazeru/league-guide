@@ -16,7 +16,6 @@ export class AppComponent {
     { title: 'Mapas', url: '/mapas', icon: 'chevron-forward' },
     { title: 'Guias', url: '/guias', icon: 'chevron-forward' },
     { title: 'Acceder', url: '/iniciar-sesion', icon: 'chevron-forward' },
-    { title: 'ADMIN', url: '/admin', icon: 'warning' },
   ];
 
   constructor() {}

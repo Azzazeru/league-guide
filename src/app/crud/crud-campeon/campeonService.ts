@@ -1,99 +1,87 @@
 import { Injectable } from '@angular/core';
-import { IRegistro } from './interface/IRegistro';
+import { ClProducto } from './model/claseCampeon';
 
-// Injectable permite utilizar la misma instancia en varias páginas
-// Se pasa como parámetro en el constructor (Injección) 
+// Importamos  las librerías necesarias
+import { Observable, of, throwError } from 'rxjs';
+import { catchError, tap, map } from 'rxjs/operators';
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+
+// creamos Constantes que utilizaremos en el envio
+const apiUrl = "http://localhost:3000/campeon";
+const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
+
 @Injectable({
-    // providedIn: 'root', No Es necesario incluirlos en las librerías
-    providedIn: 'root'
+  providedIn: 'root'
 })
-export class ClienteService {
-    // Creamos un Arreglo del tipo IRegistro
-    private registros: IRegistro[] =
-        [{id:"1",nombre:"Aatrox",titulo:"La Espada Darkin",descripcion:"Desc",habilidadq:"q",habilidadw:"w",habilidade:"e",habilidadr:"r"},
-        {id:"2",nombre:"Ahri",titulo:"La Vastaya de Nueve Colas"}
-        ,{id:"3",nombre:"Akali",titulo:"La Asesina Furtiva"}
-        ,{id:"4",nombre:"Akshan",titulo:"El Centinela Rebelde"}
-        ,{id:"5",nombre:"Alistar",titulo:"El Minotauro"}
-            ]
+export class ProductServiceService {
+  // Injectamos HttpClient, para poder consular una página
+  constructor(private http: HttpClient) { }
 
-    constructor() {
-        // Revisar CUANDO y CUANTAS veces se inicia el servicio 
-        console.log("Inicio Servicio****************}")
-    }
-    // Método que retorna la dirección del arreglo
-    getRegistroMetodo(): IRegistro[] {
-        return this.registros
-    }
-    // Nadien toca la variable, a no ser que sea por métodos 
-    // que se crearán más adelante
-    // por lo cual retorno una copia
-    get getRegistros(): IRegistro[] {
-        return [...this.registros]
-    }
+  // Controla y enviará un mensaje a consola para todos los errores
+  // ¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿¿  singo de pregunta al revez
+  private handleError<T> (operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error("handleError Harrys",error); // log to console instead
+      return of(result as T);
+    };
+  }
 
-    // Accesador que retorna el contenido(Copia)
-    get getRegistrosCopia(): IRegistro[] {
-        // 3 punto retorna una copia
-        return [...this.registros]
-    }
-    // Accesador que retorna la dirección del arreglo
-    get getRegistrosReferencia(): IRegistro[] {
-        return this.registros
-    }
+  // Método Agregar producto, y devuelve un observable del tipo Producto
+  // Debe ser un Observable si deses suscribir este método en otro lado
+  addProduct(campeon: ClProducto): Observable<ClProducto> {
+    console.log("Res-api Enviando AddProducto : ",campeon);
+    // Ojo No lo ejecuta lo declara
+    // El Pipe lo intercepta
+    return this.http.post<ClProducto>(apiUrl, campeon, httpOptions)
+    
 
-    agregarServicio(reg:IRegistro){
-        this.registros.push(reg)    
-        console.log("Registro Agregars:",this.registros)
-    }
-    actualizarServicio(id:string,reg:IRegistro){
-        console.log("buscando")
-        // Buscamos el Objeto por medio del id
-        // Recuerde que found apunta al objeto
-        let found = this.registros.find((element) => element.id == id);
-        // Si existe realizo los cambios
-        if (found){
-            // Found contiene la dirección 
-            found!.descripcion=reg.descripcion
-            found!.nombre=reg.nombre
-            found!.titulo=reg.titulo
-            found!.habilidadq=reg.habilidadq
-            found!.habilidadw=reg.habilidadw
-            found!.habilidade=reg.habilidade
-            found!.habilidadr=reg.habilidadr
-            console.log("found",found)
-            console.log("Registro Actualizar:",this.registros)
-        }
-    }
-    eliminarServicio(id:string){
-        console.log("Registro Eliminar:",this.registros)
-        // Observe que parte del final
-        // Pregunte al Profesor( El Magnifico :)  )
-        // Pista los registros cuando se elimina uno los demás se corren un espacio
-        for (let i = this.registros.length-1; i >= 0; i--) {
-            console.log("busco",i,id,this.registros[i].id)
-            if (this.registros[i].id === id) {
-                let spliced = this.registros.splice(i, 1);
-                console.log(" Eliminado: " , this.registros,[i]);
-                // Si solo existe una vez, debiera realizar un return
-            }
-        }
-        console.log("Registro Eliminar:",this.registros)
+      // .pipe(  // Tubería
+      //    // tap intersecta la respuesta si no hay error
+      //   tap((producto: ClProducto) => console.log('added product w/:',campeon)),
+      //   // En caso de que ocurra Error
+      //   catchError(this.handleError<ClProducto>('addProduct'))
+      // );
+  }
+
+    // Obtenemos todos los Productos
+    getProducts(): Observable<ClProducto[]> {
+      console.log("getProducts ()");
+      return this.http.get<ClProducto[]>(apiUrl)
+        // .pipe(
+        //   tap(heroes => console.log('fetched products')),
+        //   catchError(this.handleError('getProducts', []))
+        // );
     }
 
-     // Recibimos el ID a buscar
-     // Devuelve una estructura del tipo IRegistro
-    leerServicio(id:string):IRegistro{
-        for (let i = 0; i < this.registros.length; i++) {
-            if (this.registros[i].id === id) {
-                // Si lo encuentro realizo un return
-                // devulevo la direccion, no el contenido
-                return this.registros[i]
-            }
-        }
+      //  Obtener un Producto
+  getProduct(id: string): Observable<ClProducto> {
+    //const url = '${apiUrl}/${id}';
+    //return this.http.get<Producto>(url).pipe(
+    console.log("getProduct ID:" + id);
+    return this.http.get<ClProducto>(apiUrl + "/" + id)
+      // .pipe(
+      //   tap(_ => console.log('fetched product id=${id}')),
+      //   catchError(this.handleError<ClProducto>('getProduct id=${id}'))
+      // );
+  }
 
-        // En caso  de que no exista, devuelve una estructura vacia
-        return {id:"",nombre:"",titulo:"",descripcion:"",habilidadq:"", habilidadw:"", habilidade:"", habilidadr:""}
-    }
+  deleteProduct(id: number): Observable<ClProducto> {
+    //const url = '${apiUrl}/${id}';
+    //return this.http.delete<Producto>(url, httpOptions).pipe(
+    return this.http.delete<ClProducto>(apiUrl + "/" + id, httpOptions)
+      // .pipe(
+      //   tap(_ => console.log('deleted product id=${id}')),
+      //   catchError(this.handleError<ClProducto>('deleteProduct'))
+      // );
+  }
+
+  // Actualizar el producto por medio de PUT
+  updateProduct(id: number, producto: ClProducto): Observable<ClProducto> {
+    return this.http.put<ClProducto>(apiUrl + "/" + id, producto, httpOptions)
+      // .pipe(
+      //   tap(_ => console.log('updated product id=${id}')),
+      //   catchError(this.handleError<any>('updateProduct'))
+      // );
+  }
 
 }

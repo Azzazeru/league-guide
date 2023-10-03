@@ -1,58 +1,35 @@
 {
-    "usuario" : [
-        {
-            "id" : "1",
-            "nombre" : "a",
-            "contrasenia" : "",
-            "servidor" : ""
-        }
-    ],
-
-    "campeon" : [
-        {
-            "id" : "1",
-            "titulo" : "a",
-            "descripcion" : "",
-            "habilidadq" : "",
-            "habilidadw" : "",
-            "habilidade" : "",
-            "habilidadr" : ""
-
-        }
-    ],
-
-    "item" : [
-        {
-            "id" : "1",
-            "nombre" : "a",
-            "titulo" : "",
-            "descripcion" : ""
-        }
-    ],
-
-    "mapa" : [
-        {
-            "id" : "1",
-            "nombre" : "a",
-            "titulo" : "",
-            "descripcion" : ""
-        }
-    ],
-
-    "modo" : [
-        {
-            "id" : "1",
-            "nombre" : "a",
-            "mapa" : ""
-        }
-    ],
-
-    "noticia" : [
-        {
-            "id" : "1",
-            "titulo" : "a",
-            "link" : ""
-        }
-    ]
-
+  "usuario": [],
+  "campeon": [
+    {
+      "id": 1,
+      "nombre": "Aatrox",
+      "titulo": "La espada darkin"
+    },
+    {
+      "id": 2,
+      "nombre": "Akali",
+      "titulo": "Minion verde"
+    }
+  ],
+  "item": [],
+  "mapa": [],
+  "modo": [],
+  "noticia": [
+    {
+      "id": 1,
+      "nombre": "Briar Op",
+      "link": "briar.cl"
+    },
+    {
+      "id": 3,
+      "nombre": "Nerf akali ",
+      "link": "www.movistar/lol.cl"
+    },
+    {
+      "id": 4,
+      "nombre": "Rework jax",
+      "link": "www.twitch.tv/azzazeru"
+    }
+  ]
 }

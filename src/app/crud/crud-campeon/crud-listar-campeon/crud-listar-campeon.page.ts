@@ -1,7 +1,13 @@
-import { Component} from '@angular/core';
+// Importamos Librerías
+import { LoadingController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
+import { ClProducto } from '../model/claseCampeon';
+
+import { ProductServiceService } from '../campeonService';
+
+import { Component, OnInit} from '@angular/core';
 
 // Importamos ClienteService y IRegistro
-import { ClienteService } from '../campeonService';
 import { IRegistro } from '../interface/IRegistro';
 
 @Component({
@@ -9,46 +15,50 @@ import { IRegistro } from '../interface/IRegistro';
   templateUrl: './crud-listar-campeon.page.html',
   //styleUrls: ['./cliente.page.scss'],
 })
-export class ListarClientePage {
+export class ListarClientePage implements OnInit {
 
-  //  Referencia ==> Solo tiene la dirección de memoria
-  //  No tiene sentido, solo la utilizamos para el ejemplo
-  registro=this.cliServ.getRegistrosReferencia
+   // Creamos la Variable para el Html
+   producto: ClProducto[] = [];
+
 
   // Recibimos la clase ClienteService 
   // por parámetro en el constructor(Injección)
-  constructor(private cliServ:ClienteService
-          // Cuando es public la puedo utilizar en el HTML
-              ,public cliServPublic:ClienteService
-              ) { 
+  // Injectamos Librerias
+ constructor(public restApi: ProductServiceService
+  , public loadingController: LoadingController
+  , public router: Router) { }
 
-    // (get) Solicita la dirección del arreglo
-    // pese que es un mètodo se utiliza como si fuera una variable 
-    // Agrega un registro, lo realiza en el original            
-    this.registro=this.cliServ.getRegistrosReferencia
-    this.registro.push({id:"", nombre:"",titulo:"",descripcion:"",habilidadq:"1134", habilidadw:"1134", habilidade:"1134", habilidadr:"1134"})
-    console.log("registroReferencia:",this.registro)
+  // LLamamos al método que rescata los productos  
+  ngOnInit() {
+  this.getProducts();
+}
 
-    // (get) Solicita una copia, duplica la memoria ocupada por el arreglo
-    // Se agrega un registro localmente, no se altera el original
-    this.registro=this.cliServ.getRegistrosCopia
-    this.registro.push({id:"", nombre:"",titulo:"",descripcion:"x@c.cl",habilidadq:"1134", habilidadw:"1134", habilidade:"1134", habilidadr:"1134"})
-    console.log("registroCopia:",this.registro)
-
-    // Utiliza un método
-    // Agrega un registro en el original
-    this.registro=this.cliServ.getRegistroMetodo();
-    this.registro.push({id:"", nombre:"",titulo:"",descripcion:"x@c.cl",habilidadq:"1134", habilidadw:"1134", habilidade:"1134", habilidadr:"1134"})
-    console.log("registroMetodo:",this.registro)
-  }
-
-  get getRegistros():IRegistro[]{
-    // Solicita por medio de un acceador una copia 
-    return this.cliServ.getRegistros
-  }
-
-  getRegistrosMetodo():IRegistro[]{
-    // Solicita por medio de un acceador una copia 
-    return this.cliServ.getRegistrosCopia
+    // Método  que rescta los productos
+  async getProducts() {
+    console.log("Entrando :getProducts");
+    // Crea un Wait (Esperar)
+    const loading = await this.loadingController.create({
+      message: 'Harrys Loading...'
+    });
+    // Muestra el Wait
+    await loading.present();
+    console.log("Entrando :");
+    // Obtiene el Observable del servicio
+    this.restApi.getProducts()
+      .subscribe({
+        next: (res) => {
+          console.log("Res:" + res);
+          // Si funciona asigno el resultado al arreglo productos
+          this.producto = res;
+          console.log("thisProductos:", this.producto);
+          loading.dismiss();
+        },
+        complete: () => { },
+        error: (err) => {
+          // Si da error, imprimo en consola.
+          console.log("Err:" + err);
+          loading.dismiss();
+        }
+      })
   }
 }

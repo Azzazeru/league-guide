@@ -1,55 +1,27 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
+
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-title>product-edit</ion-title>
     <ion-buttons slot="end">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Actualizar</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
-
-<ion-content>
-  <form>
-    <ion-item lines="full">
-      <ion-label position="floating">ID</ion-label>
-      <ion-input type="text" name="txId" [(ngModel)]="id" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
+<ion-content padding>
+  <form [formGroup]="productForm"  (ngSubmit)="onFormSubmit(productForm.value)">
+    <ion-item>
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input type="text" name="txNombres" [(ngModel)]="registro.nombre" required></ion-input>
+      <ion-input type="text" [(ngModel)]="producto.nombre" formControlName="prod_name"></ion-input>
     </ion-item>
-    <ion-item lines="full">
+    <ion-item>
       <ion-label position="floating">Titulo</ion-label>
-      <ion-input type="text" name="txTitulo" [(ngModel)]="registro.titulo" required></ion-input>
+      <ion-input type="text" [(ngModel)]="producto.titulo" formControlName="prod_desc"></ion-input>
     </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Descripcion</ion-label>
-      <ion-textarea type="text" name="txDescripcion" [(ngModel)]="registro.descripcion" required></ion-textarea>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Habilidad Q:</ion-label>
-      <ion-input type="text" name="txHabilidadQ" [(ngModel)]="registro.habilidadq" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Habilidad W:</ion-label>
-      <ion-input type="text" name="txHabilidadW" [(ngModel)]="registro.habilidadw" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Habilidad E:</ion-label>
-      <ion-input type="text" name="txHabilidadE" [(ngModel)]="registro.habilidade" required></ion-input>
-    </ion-item>
-    <ion-item lines="full">
-      <ion-label position="floating">Habilidad R:</ion-label>
-      <ion-input type="text" name="txHabilidadR" [(ngModel)]="registro.habilidadr" required></ion-input>
-    </ion-item>
-    <ion-row>
-      <ion-col>
-        <ion-button (click)="grabar()" color="danger" expand="block">Actualizar Campeon</ion-button>
-      </ion-col>
-    </ion-row>
+    <ion-button type="submit" shape="round" color="primary" expand="block" [disabled]="!productForm.valid">Submit</ion-button>
   </form>
 </ion-content>

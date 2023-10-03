@@ -18,7 +18,7 @@ export class AdminPage implements OnInit {
   }
 
   redirectToCrudCampeones() {
-    this.router.navigate(['/crud-campeon']);
+    this.router.navigate(['/crud-listar-campeon']);
   }
 
   redirectToCrudItems() {
@@ -34,7 +34,7 @@ export class AdminPage implements OnInit {
   }
 
   redirectToCrudNoticias() {
-    this.router.navigate(['/crud-noticia']);
+    this.router.navigate(['/noticia-list']);
   }
 
 } 

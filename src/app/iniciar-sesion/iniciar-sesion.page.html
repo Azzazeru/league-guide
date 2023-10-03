@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>iniciar-sesion</ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -11,25 +11,24 @@
     </ion-toolbar>
   </ion-header>
 
-  <div style="margin-top: 100px;">
-    <ion-list>
-      <ion-item>
-        <ion-input labelPlacement="floating" placeholder="example@email.com">
-          <div slot="label">Email</div>
-        </ion-input>
-      </ion-item>
-    </ion-list>
-
-    <ion-list>
-      <ion-item>
-        <ion-input labelPlacement="floating" placeholder="******" type="password">
-          <div slot="label">Contraseña</div>
-        </ion-input>
-      </ion-item>
-    </ion-list>
-
-    <ion-button expand="block" style="margin-top: 25px;">Acceder</ion-button>
-    <a href="/registrarse"><p style="text-align: center;">¿No tienes cuenta? ¡Crea una!</p></a>
+  <div class="login-container">
+    <h2>Iniciar Sesión</h2>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Usuario</label>
+        <input type="text" id="username" name="username" [(ngModel)]="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" [(ngModel)]="password" required>
+      </div>
+      <button type="submit" class="login-button">Iniciar Sesión</button>
+    </form>
+    <div class="signup-link">
+      <a href="/registrarse">¿No tienes una cuenta? Crea una</a>
+    </div>
   </div>
+  
+  
 
 </ion-content>
