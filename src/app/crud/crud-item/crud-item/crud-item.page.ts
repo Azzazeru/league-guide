@@ -18,7 +18,7 @@ export class CrudItemPage implements OnInit {
   }
 
   redirectToActualizar() {
-    this.router.navigate(['/crud-modificar-item']);
+    this.router.navigate(['/crud-actualizar-item']);
   }
 
   redirectToEliminar() {
@@ -32,6 +32,5 @@ export class CrudItemPage implements OnInit {
   redirectToListar() {
     this.router.navigate(['/crud-listar-item']);
   }
-
 
 }

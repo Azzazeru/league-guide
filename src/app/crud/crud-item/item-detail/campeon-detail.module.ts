@@ -4,16 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { ListarPageRoutingModule } from './crud-listar-item-routing';
-import { ListarClientePage } from './crud-listar-item.page';
+import { CampeonDetailPageRoutingModule } from './campeon-detail-routing.module';
+
+import { CampeonDetailPage } from './campeon-detail.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ListarPageRoutingModule
+    CampeonDetailPageRoutingModule
   ],
-  declarations: [ListarClientePage]
+  declarations: [CampeonDetailPage]
 })
-export class CrudListarItemPageModule {}
+export class CampeonDetailPageModule {}

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CrudEliminarItemPage } from './crud-eliminar-item.page';
+import { ListarClientePage } from './crud-listar-item.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CrudEliminarItemPage
+    component: ListarClientePage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CrudEliminarItemPageRoutingModule {}
+export class ListarPageRoutingModule {}

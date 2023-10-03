@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CrudListarItemPage } from './crud-listar-item.page';
+import { ClienteActualizarPage } from './crud-actualizar-item.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CrudListarItemPage
+    component: ClienteActualizarPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CrudListarItemPageRoutingModule {}
+export class ClienteActualizarPageRoutingModule {}

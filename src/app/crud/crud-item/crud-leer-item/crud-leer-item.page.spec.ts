@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CrudLeerItemPage } from './crud-leer-item.page';
+import { CrudLeerCampeonPage } from './crud-leer-campeon.page';
 
-describe('CrudLeerItemPage', () => {
-  let component: CrudLeerItemPage;
-  let fixture: ComponentFixture<CrudLeerItemPage>;
+describe('CrudLeerCampeonPage', () => {
+  let component: CrudLeerCampeonPage;
+  let fixture: ComponentFixture<CrudLeerCampeonPage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(CrudLeerItemPage);
+    fixture = TestBed.createComponent(CrudLeerCampeonPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

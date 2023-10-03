@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CrudLeerItemPageRoutingModule } from './crud-leer-item-routing.module';
+import { LeerPageRoutingModule } from './crud-leer-item-routing.module';
 
-import { CrudLeerItemPage } from './crud-leer-item.page';
+import { ClienteLeerPage } from './crud-leer-item.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CrudLeerItemPageRoutingModule
+    LeerPageRoutingModule
   ],
-  declarations: [CrudLeerItemPage]
+  declarations: [ClienteLeerPage]
 })
 export class CrudLeerItemPageModule {}

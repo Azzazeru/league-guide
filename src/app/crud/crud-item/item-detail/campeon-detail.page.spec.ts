@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CrudCampeonPage } from './crud-campeon.page';
+import { CampeonDetailPage } from './campeon-detail.page';
 
-describe('CrudCampeonPage', () => {
-  let component: CrudCampeonPage;
-  let fixture: ComponentFixture<CrudCampeonPage>;
+describe('CampeonDetailPage', () => {
+  let component: CampeonDetailPage;
+  let fixture: ComponentFixture<CampeonDetailPage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(CrudCampeonPage);
+    fixture = TestBed.createComponent(CampeonDetailPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

@@ -2,19 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
+import { ReactiveFormsModule } from '@angular/forms';
+
 import { IonicModule } from '@ionic/angular';
-
-import { CrudAgregarItemPageRoutingModule } from './crud-agregar-item-routing.module';
-
-import { CrudAgregarItemPage } from './crud-agregar-item.page';
+import { ClienteAgregarPageRoutingModule } from './crud-agregar-item-routing.module';
+import { ProductAddPage } from './crud-agregar-item.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CrudAgregarItemPageRoutingModule
+    ClienteAgregarPageRoutingModule,
+    ReactiveFormsModule,
+
   ],
-  declarations: [CrudAgregarItemPage]
+  declarations: [ProductAddPage]
 })
 export class CrudAgregarItemPageModule {}

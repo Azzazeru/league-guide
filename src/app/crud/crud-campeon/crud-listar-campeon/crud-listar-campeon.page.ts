@@ -19,7 +19,7 @@ export class ListarClientePage implements OnInit {
 
    // Creamos la Variable para el Html
    producto: ClProducto[] = [];
-
+ 
 
   // Recibimos la clase ClienteService 
   // por parámetro en el constructor(Injección)

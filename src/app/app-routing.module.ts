@@ -99,13 +99,10 @@ const routes: Routes = [
     path: 'crud-listar-item',
     loadChildren: () => import('./crud/crud-item/crud-listar-item/crud-listar-item.module').then( m => m.CrudListarItemPageModule)
   },
+
   {
-    path: 'crud-eliminar-item',
-    loadChildren: () => import('./crud/crud-item/crud-eliminar-item/crud-eliminar-item.module').then( m => m.CrudEliminarItemPageModule)
-  },
-  {
-    path: 'crud-modificar-item',
-    loadChildren: () => import('./crud/crud-item/crud-modificar-item/crud-modificar-item.module').then( m => m.CrudModificarItemPageModule)
+    path: 'crud-actualizar-item',
+    loadChildren: () => import('./crud/crud-item/crud-actualizar-item/crud-actualizar-item.module').then( m => m.CrudActualizarItemPageModule)
   },
   {
     path: 'crud-agregar-mapa',

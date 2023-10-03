@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CrudModificarItemPage } from './crud-modificar-item.page';
+import { CampeonDetailPage } from './campeon-detail.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: CrudModificarItemPage
+    component: CampeonDetailPage
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class CrudModificarItemPageRoutingModule {}
+export class CampeonDetailPageRoutingModule {}

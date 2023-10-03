@@ -12,7 +12,17 @@
       "titulo": "Minion verde"
     }
   ],
-  "item": [],
+  "item": [    {
+    "id": 1,
+    "nombre": "Espada de Doran",
+    "titulo": "Item Primario"
+  },
+  {
+    "id": 2,
+    "nombre": "Akali",
+    "titulo": "Minion verde"
+    }
+  ],
   "mapa": [],
   "modo": [],
   "noticia": [
