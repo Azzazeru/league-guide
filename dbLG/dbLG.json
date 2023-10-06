@@ -1,45 +1,1061 @@
 {
+
   "usuario": [],
+
   "campeon": [
+      {
+        "id": 1,
+        "nombre": "Aatrox",
+        "titulo": "La Espada Darkin",
+        "fechaDeSalida": "2013/06/13"
+      },
+      {
+        "id": 2,
+        "nombre": "Ahri",
+        "titulo": "La Muñeca de la Muerte",
+        "fechaDeSalida": "2011/12/14"
+      },
+      {
+        "id": 3,
+        "nombre": "Akali",
+        "titulo": "La Asesina Furtiva",
+        "fechaDeSalida": "2010/05/11"
+      },
+      {
+        "id": 4,
+        "nombre": "Alistar",
+        "titulo": "El Minotauro",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 5,
+        "nombre": "Amumu",
+        "titulo": "La Momia Triste",
+        "fechaDeSalida": "2009/06/26"
+      },
+      {
+        "id": 6,
+        "nombre": "Anivia",
+        "titulo": "La Criofénix",
+        "fechaDeSalida": "2009/07/10"
+      },
+      {
+        "id": 7,
+        "nombre": "Annie",
+        "titulo": "La Hija de la Oscuridad",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 8,
+        "nombre": "Aphelios",
+        "titulo": "El Lunari Sangriento",
+        "fechaDeSalida": "2019/12/11"
+      },
+      {
+        "id": 9,
+        "nombre": "Ashe",
+        "titulo": "La Arquera de Hielo",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 10,
+        "nombre": "Aurelion Sol",
+        "titulo": "El Forjador de Estrellas",
+        "fechaDeSalida": "2016/03/24"
+      },
+      {
+        "id": 11,
+        "nombre": "Azir",
+        "titulo": "El Emperador de las Arenas",
+        "fechaDeSalida": "2014/09/16"
+      },
+      {
+        "id": 12,
+        "nombre": "Bard",
+        "titulo": "El Guardián Errante",
+        "fechaDeSalida": "2015/03/12"
+      },
+      {
+        "id": 13,
+        "nombre": "Blitzcrank",
+        "titulo": "El Gran Gólem de Vapor",
+        "fechaDeSalida": "2009/09/02"
+      },
+      {
+        "id": 14,
+        "nombre": "Brand",
+        "titulo": "La Venganza Ardiente",
+        "fechaDeSalida": "2011/04/12"
+      },
+      {
+        "id": 15,
+        "nombre": "Braum",
+        "titulo": "El Corazón de Fréljord",
+        "fechaDeSalida": "2014/05/12"
+      },
+      {
+        "id": 16,
+        "nombre": "Caitlyn",
+        "titulo": "La Sheriff de Piltóver",
+        "fechaDeSalida": "2011/01/04"
+      },
+      {
+        "id": 17,
+        "nombre": "Camille",
+        "titulo": "La Sombra de Acero",
+        "fechaDeSalida": "2016/12/07"
+      },
+      {
+        "id": 18,
+        "nombre": "Cassiopeia",
+        "titulo": "El Abrazo de la Serpiente",
+        "fechaDeSalida": "2010/12/14"
+      },
+      {
+        "id": 19,
+        "nombre": "Cho'Gath",
+        "titulo": "El Terror de las Fauces",
+        "fechaDeSalida": "2009/06/26"
+      },
+      {
+        "id": 20,
+        "nombre": "Corki",
+        "titulo": "El Bombardero Osado",
+        "fechaDeSalida": "2009/07/19"
+      },
+      {
+        "id": 21,
+        "nombre": "Darius",
+        "titulo": "La Mano de Noxus",
+        "fechaDeSalida": "2012/05/23"
+      },
+      {
+        "id": 22,
+        "nombre": "Diana",
+        "titulo": "La Lunari",
+        "fechaDeSalida": "2012/08/07"
+      },
+      {
+        "id": 23,
+        "nombre": "Dr. Mundo",
+        "titulo": "El Loco de Zaun",
+        "fechaDeSalida": "2009/09/02"
+      },
+      {
+        "id": 24,
+        "nombre": "Ekko",
+        "titulo": "El Joven Quebrantatiempo",
+        "fechaDeSalida": "2015/05/29"
+      },
+      {
+        "id": 25,
+        "nombre": "Elise",
+        "titulo": "La Reina Araña",
+        "fechaDeSalida": "2012/10/26"
+      },
+      {
+        "id": 26,
+        "nombre": "Evelynn",
+        "titulo": "La Abrazadora de la Agonía",
+        "fechaDeSalida": "2009/05/01"
+      },
+      {
+        "id": 27,
+        "nombre": "Ezreal",
+        "titulo": "El Explorador Pródigo",
+        "fechaDeSalida": "2010/03/16"
+      },
+      {
+        "id": 28,
+        "nombre": "Fiddlesticks",
+        "titulo": "El Mensajero de la Muerte",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 29,
+        "nombre": "Fiora",
+        "titulo": "La Gran Duelista",
+        "fechaDeSalida": "2012/02/29"
+      },
+      {
+        "id": 30,
+        "nombre": "Fizz",
+        "titulo": "El Bromista de las Mareas",
+        "fechaDeSalida": "2011/11/15"
+      },
+      {
+        "id": 31,
+        "nombre": "Galio",
+        "titulo": "El Coloso",
+        "fechaDeSalida": "2010/08/10"
+      },
+      {
+        "id": 32,
+        "nombre": "Gangplank",
+        "titulo": "El Azote de los Mares",
+        "fechaDeSalida": "2009/08/19"
+      },
+      {
+        "id": 33,
+        "nombre": "Garen",
+        "titulo": "El Poder de Demacia",
+        "fechaDeSalida": "2009/04/27"
+      },
+      {
+        "id": 34,
+        "nombre": "Gnar",
+        "titulo": "El Eslabón Perdido",
+        "fechaDeSalida": "2014/08/14"
+      },
+      {
+        "id": 35,
+        "nombre": "Gragas",
+        "titulo": "El Charro Borracho",
+        "fechaDeSalida": "2010/02/02"
+      },
+      {
+        "id": 36,
+        "nombre": "Graves",
+        "titulo": "El Forajido",
+        "fechaDeSalida": "2011/10/19"
+      },
+      {
+        "id": 37,
+        "nombre": "Gwen",
+        "titulo": "La Costurera Sagrada",
+        "fechaDeSalida": "2021/04/15"
+      },
+      {
+        "id": 38,
+        "nombre": "Hecarim",
+        "titulo": "El Jinete Sin Cabeza",
+        "fechaDeSalida": "2012/04/18"
+      },
+      {
+        "id": 39,
+        "nombre": "Heimerdinger",
+        "titulo": "El Inventor Idiota",
+        "fechaDeSalida": "2009/10/10"
+      },
+      {
+        "id": 40,
+        "nombre": "Illaoi",
+        "titulo": "La Sacerdotisa del Kraken",
+        "fechaDeSalida": "2015/11/24"
+      },
+      {
+        "id": 41,
+        "nombre": "Irelia",
+        "titulo": "La Danzarina de las Hojas",
+        "fechaDeSalida": "2010/11/16"
+      },
+      {
+        "id": 42,
+        "nombre": "Ivern",
+        "titulo": "El Amigo del Bosque",
+        "fechaDeSalida": "2016/10/05"
+      },
+      {
+        "id": 43,
+        "nombre": "Janna",
+        "titulo": "La Furia de la Tormenta",
+        "fechaDeSalida": "2009/09/02"
+      },
+      {
+        "id": 44,
+        "nombre": "Jarvan IV",
+        "titulo": "El Exemplar de Demacia",
+        "fechaDeSalida": "2011/03/01"
+      },
+      {
+        "id": 45,
+        "nombre": "Jax",
+        "titulo": "El Maestro de Armas",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 46,
+        "nombre": "Jayce",
+        "titulo": "El Defensor del Mañana",
+        "fechaDeSalida": "2012/07/07"
+      },
+      {
+        "id": 47,
+        "nombre": "Jhin",
+        "titulo": "El Virtuoso",
+        "fechaDeSalida": "2016/02/01"
+      },
+      {
+        "id": 48,
+        "nombre": "Jinx",
+        "titulo": "La Pistolera",
+        "fechaDeSalida": "2013/10/10"
+      },
+      {
+        "id": 49,
+        "nombre": "Kai'Sa",
+        "titulo": "La Hija del Vacío",
+        "fechaDeSalida": "2018/03/07"
+      },
+      {
+        "id": 50,
+        "nombre": "Kalista",
+        "titulo": "El Alma de la Venganza",
+        "fechaDeSalida": "2014/11/20"
+      },
+      {
+        "id": 51,
+        "nombre": "Karma",
+        "titulo": "La Iluminada",
+        "fechaDeSalida": "2011/02/01"
+      },
+      {
+        "id": 52,
+        "nombre": "Karthus",
+        "titulo": "El Caminante de las Sombras",
+        "fechaDeSalida": "2009/06/12"
+      },
+      {
+        "id": 53,
+        "nombre": "Kassadin",
+        "titulo": "El Caminante del Vacío",
+        "fechaDeSalida": "2009/08/07"
+      },
+      {
+        "id": 54,
+        "nombre": "Katarina",
+        "titulo": "La Cuchilla Siniestra",
+        "fechaDeSalida": "2009/09/19"
+      },
+      {
+        "id": 55,
+        "nombre": "Kayle",
+        "titulo": "La Justa",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 56,
+        "nombre": "Kayn",
+        "titulo": "El Segador de Almas",
+        "fechaDeSalida": "2017/07/12"
+      },
+      {
+        "id": 57,
+        "nombre": "Kennen",
+        "titulo": "El Corazón de la Tempestad",
+        "fechaDeSalida": "2010/04/08"
+      },
+      {
+        "id": 58,
+        "nombre": "Kha'Zix",
+        "titulo": "El Saqueador del Vacío",
+        "fechaDeSalida": "2012/09/27"
+      },
+      {
+        "id": 59,
+        "nombre": "Kindred",
+        "titulo": "Los Cazadores Eternos",
+        "fechaDeSalida": "2015/10/14"
+      },
+      {
+        "id": 60,
+        "nombre": "Kled",
+        "titulo": "El Jinete Cascarrabias",
+        "fechaDeSalida": "2016/08/10"
+      },
+      {
+        "id": 61,
+        "nombre": "Kog'Maw",
+        "titulo": "El Comeentidades",
+        "fechaDeSalida": "2010/06/24"
+      },
+      {
+        "id": 62,
+        "nombre": "LeBlanc",
+        "titulo": "La Maestra de las Sombras",
+        "fechaDeSalida": "2010/11/02"
+      },
+      {
+        "id": 63,
+        "nombre": "Lee Sin",
+        "titulo": "El Monje Ciego",
+        "fechaDeSalida": "2011/04/01"
+      },
+      {
+        "id": 64,
+        "nombre": "Leona",
+        "titulo": "La Radiante Lucero del Alba",
+        "fechaDeSalida": "2011/07/13"
+      },
+      {
+        "id": 65,
+        "nombre": "Lillia",
+        "titulo": "La Flor Espiritual",
+        "fechaDeSalida": "2020/07/22"
+      },
+      {
+        "id": 66,
+        "nombre": "Lissandra",
+        "titulo": "La Bruja de Hielo",
+        "fechaDeSalida": "2013/04/30"
+      },
+      {
+        "id": 67,
+        "nombre": "Lucian",
+        "titulo": "El Purificador",
+        "fechaDeSalida": "2013/08/22"
+      },
+      {
+        "id": 68,
+        "nombre": "Lulu",
+        "titulo": "La Hada Hechicera",
+        "fechaDeSalida": "2012/03/20"
+      },
+      {
+        "id": 69,
+        "nombre": "Lux",
+        "titulo": "La Dama Luminosa",
+        "fechaDeSalida": "2010/10/19"
+      },
+      {
+        "id": 70,
+        "nombre": "Malphite",
+        "titulo": "El Fragmento del Monolito",
+        "fechaDeSalida": "2009/09/02"
+      },
+      {
+        "id": 71,
+        "nombre": "Malzahar",
+        "titulo": "El Profeta del Vacío",
+        "fechaDeSalida": "2010/06/01"
+      },
+      {
+        "id": 72,
+        "nombre": "Maokai",
+        "titulo": "El Árbol Retorcido",
+        "fechaDeSalida": "2011/02/16"
+      },
+      {
+        "id": 73,
+        "nombre": "Master Yi",
+        "titulo": "El Maestro Wuju",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 74,
+        "nombre": "Miss Fortune",
+        "titulo": "La Cazarrecompensas",
+        "fechaDeSalida": "2010/09/08"
+      },
+      {
+        "id": 75,
+        "nombre": "Mordekaiser",
+        "titulo": "El Renacido de Hierro",
+        "fechaDeSalida": "2010/02/24"
+      },
+      {
+        "id": 76,
+        "nombre": "Morgana",
+        "titulo": "El Ángel Caído",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 77,
+        "nombre": "Nami",
+        "titulo": "La Invocadora de Mareas",
+        "fechaDeSalida": "2012/12/07"
+      },
+      {
+        "id": 78,
+        "nombre": "Nasus",
+        "titulo": "El Perro del Vacío",
+        "fechaDeSalida": "2009/10/01"
+      },
+      {
+        "id": 79,
+        "nombre": "Nautilus",
+        "titulo": "El Titán Abisal",
+        "fechaDeSalida": "2012/02/14"
+      },
+      {
+        "id": 80,
+        "nombre": "Neeko",
+        "titulo": "La Camaleón Curiosa",
+        "fechaDeSalida": "2018/11/19"
+      },
+      {
+        "id": 81,
+        "nombre": "Nidalee",
+        "titulo": "La Cazadora Salvaje",
+        "fechaDeSalida": "2009/12/17"
+      },
+      {
+        "id": 82,
+        "nombre": "Nocturne",
+        "titulo": "El Eterno Pesadilla",
+        "fechaDeSalida": "2011/03/15"
+      },
+      {
+        "id": 83,
+        "nombre": "Nunu y Willump",
+        "titulo": "Los Rugidores de las Nieves",
+        "fechaDeSalida": "2009/10/01"
+      },
+      {
+        "id": 84,
+        "nombre": "Olaf",
+        "titulo": "El Berserker",
+        "fechaDeSalida": "2010/06/09"
+      },
+      {
+        "id": 85,
+        "nombre": "Orianna",
+        "titulo": "La Doncella Mecánica",
+        "fechaDeSalida": "2011/06/01"
+      },
+      {
+        "id": 86,
+        "nombre": "Ornn",
+        "titulo": "El Fuego Bélico",
+        "fechaDeSalida": "2017/08/23"
+      },
+      {
+        "id": 87,
+        "nombre": "Pantheon",
+        "titulo": "La Lanza Inquebrantable",
+        "fechaDeSalida": "2010/02/02"
+      },
+      {
+        "id": 88,
+        "nombre": "Poppy",
+        "titulo": "La Guardiana del Martillo",
+        "fechaDeSalida": "2010/01/13"
+      },
+      {
+        "id": 89,
+        "nombre": "Pyke",
+        "titulo": "El Ahogado",
+        "fechaDeSalida": "2018/05/31"
+      },
+      {
+        "id": 90,
+        "nombre": "Qiyana",
+        "titulo": "La Emperatriz de los Elementos",
+        "fechaDeSalida": "2019/07/26"
+      },
+      {
+        "id": 91,
+        "nombre": "Quinn",
+        "titulo": "Las Alas de Demacia",
+        "fechaDeSalida": "2013/03/01"
+      },
+      {
+        "id": 92,
+        "nombre": "Rakan",
+        "titulo": "El Encanto",
+        "fechaDeSalida": "2017/04/19"
+      },
+      {
+        "id": 93,
+        "nombre": "Rammus",
+        "titulo": "El Armadurillo",
+        "fechaDeSalida": "2009/07/10"
+      },
+      {
+        "id": 94,
+        "nombre": "Rek'Sai",
+        "titulo": "La Excavadora del Vacío",
+        "fechaDeSalida": "2014/12/11"
+      },
+      {
+        "id": 95,
+        "nombre": "Rell",
+        "titulo": "La Doncella de Hierro",
+        "fechaDeSalida": "2020/12/10"
+      },
+      {
+        "id": 96,
+        "nombre": "Renata Glasc",
+        "titulo": "La Quimobaronesa",
+        "fechaDeSalida": "2022/02/17"
+      },
+      {
+        "id": 97,
+        "nombre": "Rengar",
+        "titulo": "El Cazador Orgulloso",
+        "fechaDeSalida": "2012/08/21"
+      },
+      {
+        "id": 98,
+        "nombre": "Riven",
+        "titulo": "La Desterrada",
+        "fechaDeSalida": "2011/09/14"
+      },
+      {
+        "id": 99,
+        "nombre": "Rumble",
+        "titulo": "El Mecanorrevestido",
+        "fechaDeSalida": "2011/04/26"
+      },
+      {
+        "id": 100,
+        "nombre": "Ryze",
+        "titulo": "El Hechicero Rúnico",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 101,
+        "nombre": "Samira",
+        "titulo": "La Diosa de la Guerra",
+        "fechaDeSalida": "2020/09/21"
+      },
+      {
+        "id": 102,
+        "nombre": "Sejuani",
+        "titulo": "La Furia del Norte",
+        "fechaDeSalida": "2012/01/17"
+      },
+      {
+        "id": 103,
+        "nombre": "Senna",
+        "titulo": "La Redentora",
+        "fechaDeSalida": "2019/11/10"
+      },
+      {
+        "id": 104,
+        "nombre": "Seraphine",
+        "titulo": "La Diosa de las Estrellas",
+        "fechaDeSalida": "2020/11/24"
+      },
+      {
+        "id": 105,
+        "nombre": "Sett",
+        "titulo": "El Jefe",
+        "fechaDeSalida": "2020/01/14"
+      },
+      {
+        "id": 106,
+        "nombre": "Shaco",
+        "titulo": "El Bufón Siniestro",
+        "fechaDeSalida": "2009/10/10"
+      },
+      {
+        "id": 107,
+        "nombre": "Shen",
+        "titulo": "El Ojo del Crepúsculo",
+        "fechaDeSalida": "2010/03/24"
+      },
+      {
+        "id": 108,
+        "nombre": "Shyvana",
+        "titulo": "La Hija del Dragón",
+        "fechaDeSalida": "2011/11/01"
+      },
+      {
+        "id": 109,
+        "nombre": "Singed",
+        "titulo": "El Químico Loco",
+        "fechaDeSalida": "2009/04/18"
+      },
+      {
+        "id": 110,
+        "nombre": "Sion",
+        "titulo": "El Coloso No Muerto",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 111,
+        "nombre": "Sivir",
+        "titulo": "La Señora de la Batalla",
+        "fechaDeSalida": "2010/02/21"
+      },
+      {
+        "id": 112,
+        "nombre": "Skarner",
+        "titulo": "El Guardián de Cristal",
+        "fechaDeSalida": "2011/08/09"
+      },
+      {
+        "id": 113,
+        "nombre": "Sona",
+        "titulo": "La Virtuosa de las Cuerdas",
+        "fechaDeSalida": "2010/09/21"
+      },
+      {
+        "id": 114,
+        "nombre": "Soraka",
+        "titulo": "La Hija de las Estrellas",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 115,
+        "nombre": "Swain",
+        "titulo": "El Gran General Noxiano",
+        "fechaDeSalida": "2010/10/05"
+      },
+      {
+        "id": 116,
+        "nombre": "Sylas",
+        "titulo": "El Desencadenado",
+        "fechaDeSalida": "2019/01/25"
+      },
+      {
+        "id": 117,
+        "nombre": "Syndra",
+        "titulo": "La Soberana Oscura",
+        "fechaDeSalida": "2012/09/13"
+      },
+      {
+        "id": 118,
+        "nombre": "Tahm Kench",
+        "titulo": "El Rey del Río",
+        "fechaDeSalida": "2015/07/09"
+      },
+      {
+        "id": 119,
+        "nombre": "Taliyah",
+        "titulo": "La Tejedora de Rocas",
+        "fechaDeSalida": "2016/05/18"
+      },
+      {
+        "id": 120,
+        "nombre": "Talon",
+        "titulo": "La Sombra de la Espada",
+        "fechaDeSalida": "2011/08/24"
+      },
+      {
+        "id": 121,
+        "nombre": "Taric",
+        "titulo": "El Escudo de Valoran",
+        "fechaDeSalida": "2009/08/19"
+      },
+      {
+        "id": 122,
+        "nombre": "Teemo",
+        "titulo": "El Explorador Veloz",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 123,
+        "nombre": "Thresh",
+        "titulo": "El Carcelero Implacable",
+        "fechaDeSalida": "2013/01/23"
+      },
+      {
+        "id": 124,
+        "nombre": "Tristana",
+        "titulo": "La Artillera Yordle",
+        "fechaDeSalida": "2009/12/17"
+      },
+      {
+        "id": 125,
+        "nombre": "Trundle",
+        "titulo": "El Rey de los Trols",
+        "fechaDeSalida": "2010/12/01"
+      },
+      {
+        "id": 126,
+        "nombre": "Tryndamere",
+        "titulo": "El Bárbaro",
+        "fechaDeSalida": "2009/05/01"
+      },
+      {
+        "id": 127,
+        "nombre": "Twisted Fate",
+        "titulo": "El Maestro de las Cartas",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 128,
+        "nombre": "Twitch",
+        "titulo": "El Plagahuesos",
+        "fechaDeSalida": "2009/05/01"
+      },
+      {
+        "id": 129,
+        "nombre": "Udyr",
+        "titulo": "El Guardián de los Espíritus",
+        "fechaDeSalida": "2009/12/02"
+      },
+      {
+        "id": 130,
+        "nombre": "Urgot",
+        "titulo": "El Verdugo del Páramo",
+        "fechaDeSalida": "2010/08/24"
+      },
+      {
+        "id": 131,
+        "nombre": "Varus",
+        "titulo": "El Destructor de Corazones",
+        "fechaDeSalida": "2012/05/08"
+      },
+      {
+        "id": 132,
+        "nombre": "Vayne",
+        "titulo": "La Cazadora Nocturna",
+        "fechaDeSalida": "2011/05/11"
+      },
+      {
+        "id": 133,
+        "nombre": "Veigar",
+        "titulo": "El Pequeño Maestro del Mal",
+        "fechaDeSalida": "2009/07/24"
+      },
+      {
+        "id": 134,
+        "nombre": "Vel'Koz",
+        "titulo": "El Ojo del Vacío",
+        "fechaDeSalida": "2014/02/27"
+      },
+      {
+        "id": 135,
+        "nombre": "Vex",
+        "titulo": "La Tristología",
+        "fechaDeSalida": "2021/09/23"
+      },
+      {
+        "id": 136,
+        "nombre": "Vi",
+        "titulo": "La Jefa de Piltover",
+        "fechaDeSalida": "2012/12/19"
+      },
+      {
+        "id": 137,
+        "nombre": "Viego",
+        "titulo": "El Rey Arruinado",
+        "fechaDeSalida": "2021/01/21"
+      },
+      {
+        "id": 138,
+        "nombre": "Viktor",
+        "titulo": "El Heraldo Mecánico",
+        "fechaDeSalida": "2011/12/29"
+      },
+      {
+        "id": 139,
+        "nombre": "Vladimir",
+        "titulo": "El Segador Carmesí",
+        "fechaDeSalida": "2010/07/27"
+      },
+      {
+        "id": 140,
+        "nombre": "Volibear",
+        "titulo": "El Rugir del Trueno",
+        "fechaDeSalida": "2012/11/29"
+      },
+      {
+        "id": 141,
+        "nombre": "Warwick",
+        "titulo": "El Cazador Sanguinario",
+        "fechaDeSalida": "2009/02/21"
+      },
+      {
+        "id": 142,
+        "nombre": "Wukong",
+        "titulo": "El Rey de los Monos",
+        "fechaDeSalida": "2011/07/26"
+      },
+      {
+        "id": 143,
+        "nombre": "Xayah",
+        "titulo": "La Rebelde",
+        "fechaDeSalida": "2017/04/19"
+      },
+      {
+        "id": 144,
+        "nombre": "Xerath",
+        "titulo": "El Mago Ascendente",
+        "fechaDeSalida": "2011/10/05"
+      },
+      {
+        "id": 145,
+        "nombre": "Xin Zhao",
+        "titulo": "El Senescal de Demacia",
+        "fechaDeSalida": "2010/07/13"
+      },
+      {
+        "id": 146,
+        "nombre": "Yasuo",
+        "titulo": "El Imperdonable",
+        "fechaDeSalida": "2013/12/13"
+      },
+      {
+        "id": 147,
+        "nombre": "Yone",
+        "titulo": "El Desolado",
+        "fechaDeSalida": "2020/08/05"
+      },
+      {
+        "id": 148,
+        "nombre": "Yorick",
+        "titulo": "El Sepulturero",
+        "fechaDeSalida": "2011/06/22"
+      },
+      {
+        "id": 149,
+        "nombre": "Yuumi",
+        "titulo": "La Gata Mágica",
+        "fechaDeSalida": "2019/05/14"
+      },
+      {
+        "id": 150,
+        "nombre": "Zac",
+        "titulo": "El Arma Secreta",
+        "fechaDeSalida": "2013/03/29"
+      },
+      {
+        "id": 151,
+        "nombre": "Zed",
+        "titulo": "El Maestro de las Sombras",
+        "fechaDeSalida": "2012/11/13"
+      },
+      {
+        "id": 152,
+        "nombre": "Zeri",
+        "titulo": "La Chispa de Zaun",
+        "fechaDeSalida": "2022/01/20"
+      },
+      {
+        "id": 153,
+        "nombre": "Bel'Veth",
+        "titulo": "La Emperatriz del Vacío",
+        "fechaDeSalida": "2022/06/09"
+      },
+      {
+        "id": 154,
+        "nombre": "Nilah",
+        "titulo": "La Alegría Desatada",
+        "fechaDeSalida": "2022/07/13"
+      }
+  ],
+
+  "modo": [
     {
-      "id": 1,
-      "nombre": "Aatrox",
-      "titulo": "La espada darkin"
+      "idModo": 1,
+      "nombre": "Normal",
+      "mapa": "Grieta del invocador"
+    }
+  ],
+
+  "mapa": [
+    {
+      "idMapa": 1,
+      "nombre": "Grieta del invocador",
+      "modo": "Normal, Reclutamiento, Clasificatoria Solo Duo, Clasificatoria Flexible"
+    }
+  ],
+
+  "item": [
+    {
+      "idItem": 1,
+      "nombre": "Espada Doran",
+      "precio": 500,
+      "categoria": "Inicial"
     },
     {
-      "id": 2,
-      "nombre": "Akali",
-      "titulo": "Minion verde"
+      "idItem": 2,
+      "nombre": "Item2",
+      "datos": {}
+    },
+    {
+      "idItem": 3,
+      "nombre": "Item3",
+      "datos": {}
     }
   ],
-  "item": [    {
-    "id": 1,
-    "nombre": "Espada de Doran",
-    "titulo": "Item Primario"
-  },
-  {
-    "id": 2,
-    "nombre": "Akali",
-    "titulo": "Minion verde"
-    }
-  ],
-  "mapa": [],
-  "modo": [],
+
   "noticia": [
     {
-      "id": 1,
-      "nombre": "Briar Op",
-      "link": "briar.cl"
-    },
+      "idNoticia": 1,
+      "nombre": "Briar op",
+      "link": "www.lol.es"
+    }
+  ],
+
+  "habilidadCampeon": [
     {
-      "id": 3,
-      "nombre": "Nerf akali ",
-      "link": "www.movistar/lol.cl"
-    },
+      "idCampeon": 1,
+      "q": "",
+      "w": "",
+      "e": "",
+      "r": ""
+    }
+  ],
+
+  "divisione": [
     {
-      "id": 4,
-      "nombre": "Rework jax",
-      "link": "www.twitch.tv/azzazeru"
+      "idDivision": 1,
+      "nombre": "Hierro",
+      "nivel": 4
+    }
+  ],
+
+  "runa": [
+    {
+      "idRuna": 1,
+      "nombre": "Electrocutar",
+      "categoria": "Domincacion",
+      "Tipo": "Burst"
+    }
+  ],
+
+  "drake": [
+    {
+      "idDrake": 1,
+      "nombre": "Infernal",
+      "tipo": "Fuego",
+      "bonus": "Daño"
+    }
+  ],
+
+  "skinCampeon": [
+    {
+      "idCampeon": 1,
+      "nombreSkin": "",
+      "calidad": "",
+      "precioRp": ""
+    }
+  ],
+
+  "botin": [
+    {
+      "idBotin": 1,
+      "nombre": "Botin1",
+      "origen": "Origen1",
+      "precioRP": 100
+    }
+  ],
+
+  "escencia": [
+    {
+      "idEscencia": 1,
+      "nombre": "Escencia Azul",
+      "uso": "Comprar campeones"
+    }
+  ],
+
+  "hechizo": [
+    {
+      "idHechizo": 1,
+      "nombre": "Extenuar",
+      "uso": "Debilitar al enemigo"
+    }
+  ],
+
+  "monstruoJg": [
+    {
+      "idMonstruoJg": 1,
+      "nombre": "Baron Nashor",
+      "bonus": "Daño, efecto baron"
+    }
+  ],
+
+  "baratijVision":[
+    {
+      "idBaratijaVision": 1,
+      "nombre": "Centinela Invisible",
+      "uso" : "Otorgar vision"
     }
   ]
+
 }

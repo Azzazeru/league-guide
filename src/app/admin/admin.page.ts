@@ -22,7 +22,7 @@ export class AdminPage implements OnInit {
   }
 
   redirectToCrudItems() {
-    this.router.navigate(['/crud-item']);
+    this.router.navigate(['/crud-listar-item']);
   }
 
   redirectToCrudMapas() {

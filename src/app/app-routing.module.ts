@@ -101,28 +101,8 @@ const routes: Routes = [
   },
 
   {
-    path: 'crud-actualizar-item',
+    path: 'crud-actualizar-item/:id',
     loadChildren: () => import('./crud/crud-item/crud-actualizar-item/crud-actualizar-item.module').then( m => m.CrudActualizarItemPageModule)
-  },
-  {
-    path: 'crud-agregar-mapa',
-    loadChildren: () => import('./crud/crud-mapa/crud-agregar-mapa/crud-agregar-mapa.module').then( m => m.CrudAgregarMapaPageModule)
-  },
-  {
-    path: 'crud-eliminar-mapa',
-    loadChildren: () => import('./crud/crud-mapa/crud-eliminar-mapa/crud-eliminar-mapa.module').then( m => m.CrudEliminarMapaPageModule)
-  },
-  {
-    path: 'crud-modificar-mapa',
-    loadChildren: () => import('./crud/crud-mapa/crud-modificar-mapa/crud-modificar-mapa.module').then( m => m.CrudModificarMapaPageModule)
-  },
-  {
-    path: 'crud-listar-mapa',
-    loadChildren: () => import('./crud/crud-mapa/crud-listar-mapa/crud-listar-mapa.module').then( m => m.CrudListarMapaPageModule)
-  },
-  {
-    path: 'crud-mapa',
-    loadChildren: () => import('./crud/crud-mapa/crud-mapa/crud-mapa.module').then( m => m.CrudMapaPageModule)
   },
   {
     path: 'crud-modo',
@@ -157,15 +137,11 @@ const routes: Routes = [
     loadChildren: () => import('./crud/crud-campeon/crud-leer-campeon/crud-leer-campeon.module').then( m => m.CrudLeerCampeonPageModule)
   },
   {
-    path: 'crud-leer-item',
+    path: 'crud-leer-item/:id',
     loadChildren: () => import('./crud/crud-item/crud-leer-item/crud-leer-item.module').then( m => m.CrudLeerItemPageModule)
   },
   {
-    path: 'crud-leer-mapa',
-    loadChildren: () => import('./crud/crud-mapa/crud-leer-mapa/crud-leer-mapa.module').then( m => m.CrudLeerMapaPageModule)
-  },
-  {
-    path: 'crud-leer-modo',
+    path: 'crud-leer-modo/:id',
     loadChildren: () => import('./crud/crud-modo/crud-leer-modo/crud-leer-modo.module').then( m => m.CrudLeerModoPageModule)
   },
   {
@@ -215,26 +191,7 @@ const routes: Routes = [
   {
     path: 'campeon-detail/:id',
     loadChildren: () => import('./crud/crud-campeon/campeon-detail/campeon-detail.module').then( m => m.CampeonDetailPageModule)
-  },  {
-    path: 'mapa-add',
-    loadChildren: () => import('./crud/mapa/mapa-add/mapa-add.module').then( m => m.MapaAddPageModule)
-  },
-  {
-    path: 'mapa-list',
-    loadChildren: () => import('./crud/mapa/mapa-list/mapa-list.module').then( m => m.MapaListPageModule)
-  },
-  {
-    path: 'mapa-detail',
-    loadChildren: () => import('./crud/mapa/mapa-detail/mapa-detail.module').then( m => m.MapaDetailPageModule)
-  },
-  {
-    path: 'mapa-edit',
-    loadChildren: () => import('./crud/mapa/mapa-edit/mapa-edit.module').then( m => m.MapaEditPageModule)
-  },
-  {
-    path: 'mapa-all',
-    loadChildren: () => import('./crud/mapa/mapa-all/mapa-all.module').then( m => m.MapaAllPageModule)
-  },
+  }
 
 
 
