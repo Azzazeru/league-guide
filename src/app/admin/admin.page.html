@@ -1,29 +1,39 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Admin</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-title>Admin</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large"></ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large"></ion-title>
+        </ion-toolbar>
+    </ion-header>
 
-  <h2 class="centrar">ADMIN</h2>
+    <h2 class="centrar">ADMIN</h2>
 
-  <div class="center-container">
-    <div class="button-container">
-      <ion-button expand="block" (click)="redirectToCrudUsuarios()">USUARIOS</ion-button>
-      <ion-button expand="block" (click)="redirectToCrudCampeones()">CAMPEONES</ion-button>
-      <ion-button expand="block" (click)="redirectToCrudItems()">ITEMS</ion-button>
-      <ion-button expand="block" (click)="redirectToCrudMapas()">MAPAS</ion-button>
-      <ion-button expand="block" (click)="redirectToCrudModos()">MODOS</ion-button>
-      <ion-button expand="block" (click)="redirectToCrudNoticias()">NOTICIAS</ion-button>
+    <div class="center-container">
+        <div class="button-container">
+            <ion-button expand="block" (click)="usuarios()">USUARIOS</ion-button>
+            <ion-button expand="block" (click)="campeones()">CAMPEONES</ion-button>
+            <ion-button expand="block" (click)="items()">ITEMS</ion-button>
+            <ion-button expand="block" (click)="mapas()">MAPAS</ion-button>
+            <ion-button expand="block" (click)="modos()">MODOS</ion-button>
+            <ion-button expand="block" (click)="noticias()">NOTICIAS</ion-button>
+            <ion-button expand="block" (click)="habilidadesCampeones()">HABILIDADES CAMPEON</ion-button>
+            <ion-button expand="block" (click)="divisiones()">DIVISIONES</ion-button>
+            <ion-button expand="block" (click)="runas()">RUNAS</ion-button>
+            <ion-button expand="block" (click)="drakes()">DRAKES</ion-button>
+            <ion-button expand="block" (click)="skinsCampeones()">SKINS DE CAMPEONES</ion-button>
+            <ion-button expand="block" (click)="botines()">BOTINES</ion-button>
+            <ion-button expand="block" (click)="escencias()">ESCENCIAS</ion-button>
+            <ion-button expand="block" (click)="hechizos()">HECHIZOS</ion-button>
+            <ion-button expand="block" (click)="monstruosJG()">MONSTRUOS DE LA JUNGLA</ion-button>
+            <ion-button expand="block" (click)="baratijasVision()">BARATIJAS DE VISION</ion-button>
+        </div>
     </div>
-  </div>
-  
+
 
 
 </ion-content>

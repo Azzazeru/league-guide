@@ -1,0 +1,103 @@
+import { Component, OnInit } from '@angular/core';
+
+// Imporamos librerías
+import { LoadingController, AlertController } from '@ionic/angular';
+import { ActivatedRoute, Router } from '@angular/router';
+import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+
+import { ClProducto } from '../model/ClSkinCampeon';
+import { ProductServiceService } from '../skin-campeon-service.service';
+
+@Component({
+    selector: 'app-actualizar',
+    templateUrl: './skin-campeon-edit.page.html',
+    //styleUrls: ['./cliente.actualizar.page.scss'],
+})
+export class SkinCampeonEditPage implements OnInit {
+    // FormGroup para validaciones
+    productForm!: FormGroup;
+    // Esquema a utilizar en el Html
+    producto: ClProducto = { id: 1, idCampeon: 0, nombreSkin: '', calidad: '', precioRp: 0 };
+    id: any = '';
+
+    constructor(public restApi: ProductServiceService,
+        public loadingController: LoadingController,
+        public alertController: AlertController,
+        public route: ActivatedRoute,
+        public router: Router,
+        private formBuilder: FormBuilder) { }
+
+    ngOnInit() {
+        console.log("ngOnInit ID:" + this.route.snapshot.params['id']);
+        // Relizamos lectura
+        this.getProduct(this.route.snapshot.params['id']);
+        // Especificamos Validaciones por medio de FormGroup
+        this.productForm = this.formBuilder.group({
+            'prod_name': [null, Validators.required],
+            'prod_desc': [null, Validators.required],
+            'prod_fecha': [null, Validators.required],
+            'prod_rp': [null, Validators.required]
+
+        });
+    }
+
+    // Método que permite leer el producto
+    async getProduct(id: number) {
+        // Crea Wait
+        const loading = await this.loadingController.create({
+            message: 'Loading...'
+        });
+        // Muestra Wait
+        await loading.present();
+        // Obtiene el Observable
+        this.restApi.getProduct(id + "")
+            .subscribe({
+                next: (data) => {
+                    console.log("getProductID data****");
+                    console.log(data);
+                    // Si funciona Rescata el los datos
+                    this.id = data.id;
+                    // Actualiza los datos
+                    this.productForm.setValue({
+                        prod_name: data.idCampeon,
+                        prod_desc: data.nombreSkin,
+                        prod_fecha: data.calidad,
+                        prod_rp: data.precioRp
+                    });
+                    loading.dismiss();
+                },
+                complete: () => { },
+                error: (err) => {
+                    console.log("getProductID Errr****+");
+                    console.log(err);
+                    loading.dismiss();
+                }
+            })
+    }
+
+    // Método que actualiza el producto por medio de submit
+    async onFormSubmit(form: NgForm) {
+        console.log("onFormSubmit ID:" + this.id)
+        this.producto.id = this.id;
+        /*this.producto.nombre = form.prod_name;
+        this.producto.descripcion = form.prod_desc;
+        this.producto.precio = form.prod_price;
+        this.producto.cantidad = form.prod_cantidad;
+        */
+        // si envio form, envio los nombres del campo del formulario
+        //await this.restApi.updateProduct(this.id, form)
+        this.restApi.updateProduct(this.id, this.producto)
+            .subscribe({
+                next: (res) => {
+                    let id = res['id'];
+                    //this.router.navigate([ 'detail', { outlets: { details: id }} ]);
+                    //this.router.navigate(['/product-detail/' + this.id]);
+                    this.router.navigate(['/skin-campeon-list']);
+                },
+                complete: () => { },
+                error: (err) => { console.log(err); }
+            })
+
+    }
+
+}

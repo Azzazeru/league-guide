@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Habilidades Campeon</ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label>
+            <font color="red">Utilizando un Accesador
+                <ion-button [routerLink]="['/habilidad-campeon-add']">Agregar</ion-button>
+            </font>
+        </ion-label>
+    </ion-item>
+    <ion-list padding>
+        <!-- Recorremos el arreglo de registros utilizando item-->
+        <ion-item *ngFor="let p of producto">
+            <!-- Icono al inicio (start)-->
+            <ion-icon name="star" slot="start"></ion-icon>
+            <!-- Campos de item -->
+            <ion-label>{{p.idCampeon}}</ion-label>
+            <ion-label>{{p.q}}</ion-label>
+            <ion-label>{{p.w}}</ion-label>
+            <ion-label>{{p.e}}</ion-label>
+            <ion-label>{{p.r}}</ion-label>
+            <!-- Icono al final -->
+            <ion-icon name="information-circle" slot="end"></ion-icon>
+            <!-- routerlink salta a otra pagina-->
+            <ion-button [routerLink]="['/habilidad-campeon-edit/',p.id]">Edit</ion-button><br />
+            <!-- routerlink salta a otra pagina, pero con id del item-->
+            <ion-button [routerLink]="['/habilidad-campeon-detail',p.id]">Detail</ion-button><br />
+        </ion-item>
+    </ion-list>
+
+</ion-content>
