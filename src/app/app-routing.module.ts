@@ -3,6 +3,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   {
     path: '',
     redirectTo: 'folder/inbox',
@@ -221,6 +222,8 @@ const routes: Routes = [
     loadChildren: () => import('./crud/crud-campeon/campeon-detail/campeon-detail.module').then( m => m.CampeonDetailPageModule)
   },
 =======
+=======
+>>>>>>> 287640de44fb8cc38213e56632fc74cfee5d00be
     {
         path: '',
         redirectTo: 'folder/inbox',
@@ -621,6 +624,9 @@ const routes: Routes = [
 
 
 
+<<<<<<< HEAD
+>>>>>>> 287640de44fb8cc38213e56632fc74cfee5d00be
+=======
 >>>>>>> 287640de44fb8cc38213e56632fc74cfee5d00be
 
 
