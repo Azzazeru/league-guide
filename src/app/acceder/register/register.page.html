@@ -1,0 +1,59 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-title>Registrarse</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+        <ion-toolbar>
+            <ion-title size="large">Registrarse</ion-title>
+        </ion-toolbar>
+    </ion-header>
+
+    <div style="margin-top: 100px;">
+        <ion-list>
+            <ion-item>
+                <ion-input labelPlacement="floating" placeholder="xxxxxxxxxxxxxx">
+                    <div slot="label">Nombre usuario</div>
+                </ion-input>
+            </ion-item>
+        </ion-list>
+
+        <ion-list>
+            <ion-item>
+                <ion-input labelPlacement="floating" placeholder="**********" type="password">
+                    <div slot="label">Contraseña</div>
+                </ion-input>
+            </ion-item>
+        </ion-list>
+
+        <ion-item>
+            <div slot="label">Servidor</div>
+            <ion-label></ion-label>
+            <ion-select name="selectedServer">
+                <ion-select-option value="opcion1">NA</ion-select-option>
+                <ion-select-option value="opcion2">EUW</ion-select-option>
+                <ion-select-option value="opcion3">EUNE</ion-select-option>
+                <ion-select-option value="opcion4">KR</ion-select-option>
+                <ion-select-option value="opcion5">BR</ion-select-option>
+                <ion-select-option value="opcion6">TR</ion-select-option>
+                <ion-select-option value="opcion7">RU</ion-select-option>
+                <ion-select-option value="opcion8">LAN</ion-select-option>
+                <ion-select-option value="opcion9">LAS</ion-select-option>
+                <ion-select-option value="opcion10">OCE</ion-select-option>
+                <ion-select-option value="opcion11">JP</ion-select-option>
+                <ion-select-option value="opcion12">PH</ion-select-option>
+                <ion-select-option value="opcion13">SG</ion-select-option>
+                <ion-select-option value="opcion14">SG</ion-select-option>
+                <ion-select-option value="opcion15">TW</ion-select-option>
+                <ion-select-option value="opcion16">TH</ion-select-option>
+                <ion-select-option value="opcion17">VN</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-button expand="block" style="margin-top: 25px;">
+            href="/inicio">Registrarse</ion-button>
+    </div>
+
+</ion-content>

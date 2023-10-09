@@ -1,59 +1,31 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>crud-leer-mapa</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Detalle</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">crud-leer-mapa</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-item lines="full">
-    <ion-label position="floating">ID</ion-label>
-    <ion-input type="text" name="txId" [(ngModel)]="registro.id" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Nombre Mapa:</ion-label>
-    <ion-input type="text" name="txNombres" [(ngModel)]="registro.nombres" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Ban permitidos:</ion-label>
-    <ion-input type="text" name="txApellidos" [(ngModel)]="registro.titulo" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Descripcion:</ion-label>
-    <ion-textarea type="text" name="txDescripcion" [(ngModel)]="registro.descripcion" required></ion-textarea>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">cantidad_azules:</ion-label>
-    <ion-input type="text" name="tCantidad_azul" [(ngModel)]="registro.cantidad_azul" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">cantidad_rojos:</ion-label>
-    <ion-input type="text" name="txCantidad_rojo" [(ngModel)]="registro.cantidad_rojo" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Tematica especial:</ion-label>
-    <ion-input type="text" name="txTematica_especial" [(ngModel)]="registro.tematica_especial" required></ion-input>
-  </ion-item>
-  <ion-item lines="full">
-    <ion-label position="floating">Reglas espeicales:</ion-label>
-    <ion-input type="text" name="txReglas_especiales" [(ngModel)]="registro.reglas_especiales" required></ion-input>
-  </ion-item>
-  <ion-row>
-    <ion-col>
-      <ion-button disabled={{buttonLeerDisabled}} (click)="leer()" color="danger" expand="block">Leer Registro</ion-button>
-      <ion-button (click)="grabarActualizarAutomatico()" color="danger" expand="block">Grabar Automático</ion-button>
-      <ion-button disabled={{buttonEliminarDisabled}} (click)="eliminar()" color="danger" expand="block">Eliminar Registro</ion-button>
-      <br><br><br>
-      <ion-button disabled={{buttonCrearDisabled}} (click)="grabar()" color="danger" expand="block">Crear Registro</ion-button>
-      <ion-button disabled={{buttonActualizarDisabled}} (click)="actualizar()" color="danger" expand="block">Actualizar Registro</ion-button>
-    </ion-col>
-    
-  </ion-row>
-  <ion-row>
-    <ion-label class="ion-text-wrap" position="floating" color="danger"> {{msgError}}</ion-label>
-  </ion-row>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>ID: {{producto.id}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <p>Nombre: {{producto.nombre}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Titulo: {{producto.titulo}}</p>
+      </ion-item>
+      <ion-button type="button" shape="round" color="primary" expand="block" href="/crud-actualizar-mapa/{{producto.id}}">Editar</ion-button>
+      <ion-button type="button" shape="round" color="danger" expand="block" (click)="delete(producto.id)">Eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

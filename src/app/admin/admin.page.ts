@@ -2,39 +2,80 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-admin',
-  templateUrl: './admin.page.html',
-  styleUrls: ['./admin.page.scss'],
+    selector: 'app-admin',
+    templateUrl: './admin.page.html',
+    styleUrls: ['./admin.page.scss'],
 })
 export class AdminPage implements OnInit {
 
-  constructor(private router: Router) { }
+    constructor(private router: Router) { }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
-  redirectToCrudUsuarios() {
-    this.router.navigate(['/usuario']);
-  }
+    usuarios() {
+        this.router.navigate(['/usuario-list']);
+    }
 
-  redirectToCrudCampeones() {
-    this.router.navigate(['/crud-listar-campeon']);
-  }
+    campeones() {
+        this.router.navigate(['/campeon-list']);
+    }
 
-  redirectToCrudItems() {
-    this.router.navigate(['/crud-item']);
-  }
-
-  redirectToCrudMapas() {
-    this.router.navigate(['/crud-mapa']);
-  }
-
-  redirectToCrudModos() {
-    this.router.navigate(['/crud-modo']);
-  }
-
-  redirectToCrudNoticias() {
-    this.router.navigate(['/noticia-list']);
-  }
+    items() {
+        this.router.navigate(['/item-list']);
+    }
+    
+    mapas() {
+        this.router.navigate(['/mapa-list']);
+    }
+    
+    modos() {
+        this.router.navigate(['/modo-list']);
+    }
+    
+    noticias() {
+        this.router.navigate(['/noticia-list']);
+    }
+    
+    habilidadesCampeones() {
+        this.router.navigate(['/habilidad-campeon-list']);
+    }
+    
+    divisiones() {
+        this.router.navigate(['/division-list']);
+    }
+    
+    runas() {
+        this.router.navigate(['/runa-list']);
+    }
+    
+    drakes() {
+        this.router.navigate(['/drake-list']);
+    }
+    
+    skinsCampeones() {
+        this.router.navigate(['/skin-campeon-list']);
+    }
+    
+    botines() {
+        this.router.navigate(['/botin-list']);
+    }
+    
+    escencias() {
+        this.router.navigate(['/escencia-list']);
+    }
+    
+    hechizos() {
+        this.router.navigate(['/hechizo-list']);
+    }
+    
+    monstruosJG() {
+        this.router.navigate(['/monstruoJg-list']);
+    }
+    
+    baratijasVision() {
+        this.router.navigate(['/baratijaVision-list']);
+    }
+    
 
 } 

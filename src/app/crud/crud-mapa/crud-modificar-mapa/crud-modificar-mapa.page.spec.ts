@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CrudModificarMapaPage } from './crud-modificar-mapa.page';
+import { ClienteActualizarPage } from './crud-modificar-mapa.page';
 
-describe('CrudModificarMapaPage', () => {
-  let component: CrudModificarMapaPage;
-  let fixture: ComponentFixture<CrudModificarMapaPage>;
+describe('CrudActualizarCampeonPage', () => {
+  let component: ClienteActualizarPage;
+  let fixture: ComponentFixture<ClienteActualizarPage>;
 
   beforeEach(async(() => {
-    fixture = TestBed.createComponent(CrudModificarMapaPage);
+    fixture = TestBed.createComponent(ClienteActualizarPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

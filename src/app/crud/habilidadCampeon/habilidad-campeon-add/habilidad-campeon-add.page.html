@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Añadir Habilidades</ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <form [formGroup]="productForm" (ngSubmit)="onFormSubmit(productForm.value)">
+        <ion-item>
+            <ion-label position="floating">Id Campeon</ion-label>
+            <ion-input type="number" [(ngModel)]="producto.idCampeon" formControlName="idCampeon"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Q Titulo</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.q" formControlName="qt"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Q Descripcion</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.qDesc" formControlName="qd"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">W Titulo</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.w" formControlName="wt"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">W Descripcion</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.wDesc" formControlName="wd"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">E Titulo</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.e" formControlName="et"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">E Descripcion</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.eDesc" formControlName="ed"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">R Titulo</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.r" formControlName="rt"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">R Descripcion</ion-label>
+            <ion-input type="text" [(ngModel)]="producto.rDesc" formControlName="rd"></ion-input>
+        </ion-item>
+        <ion-button type="submit" shape="round" color="primary" expand="block"
+            [disabled]="!productForm.valid">Submit</ion-button>
+    </form>
+</ion-content>

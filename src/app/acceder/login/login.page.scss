@@ -1,0 +1,63 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Esto centrará el contenido verticalmente en la página */
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 300px;
+
+        .form-group {
+            margin-bottom: 20px;
+
+            label {
+                display: block;
+                font-weight: bold;
+            }
+
+            input {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        }
+
+        .login-button {
+            background-color: #007bff;
+            /* Cambia el color de fondo según tu preferencia */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #0056b3;
+                /* Cambia el color de fondo al pasar el ratón sobre el botón */
+            }
+        }
+    }
+
+    .signup-link {
+        margin-top: 20px;
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+            /* Cambia el color del enlace según tu preferencia */
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

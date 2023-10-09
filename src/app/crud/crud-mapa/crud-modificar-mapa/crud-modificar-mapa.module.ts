@@ -4,17 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CrudModificarMapaPageRoutingModule } from './crud-modificar-mapa-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { CrudModificarMapaPage } from './crud-modificar-mapa.page';
+import { ClienteActualizarPageRoutingModule } from './crud-modificar-mapa-routing.module';
+
+import { ClienteActualizarPage } from './crud-modificar-mapa.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CrudModificarMapaPageRoutingModule
+    ClienteActualizarPageRoutingModule,
+    ReactiveFormsModule
   ],
-  declarations: [CrudModificarMapaPage]
+  declarations: [ClienteActualizarPage]
 })
-export class CrudModificarMapaPageModule {}
+export class CrudActualizarMapaPageModule {}

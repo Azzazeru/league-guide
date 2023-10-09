@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Detalles</ion-title>
+        <ion-buttons slot="end">
+            <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-card>
+        <ion-card-header>
+            <ion-card-title>{{producto.id}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+            <ion-item>
+                <p>id Campeon : </p>
+                <p>{{producto.idCampeon}}</p>
+            </ion-item>
+            <ion-item>
+                <p>Q: {{producto.q}} : </p>
+                <p>{{producto.qDesc}}</p>
+            </ion-item>
+            <ion-item>
+                <p>W: {{producto.w}} : </p>
+                <p>{{producto.wDesc}}</p>
+            </ion-item>
+            <ion-item>
+                <p>E: {{producto.e}} : </p>
+                <p>{{producto.eDesc}}</p>
+            </ion-item>
+            <ion-item>
+                <p>R: {{producto.r}} : </p>
+                <p>{{producto.rDesc}}</p>
+            </ion-item>
+            <ion-button type="button" shape="round" color="primary" expand="block"
+                href="/habilidad-campeon-edit/{{producto.id}}">Editar</ion-button>
+            <ion-button type="button" shape="round" color="danger" expand="block"
+                (click)="delete(producto.id)">Eliminar</ion-button>
+        </ion-card-content>
+    </ion-card>
+</ion-content>
